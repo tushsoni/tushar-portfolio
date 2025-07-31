@@ -1,59 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta name="description" content="Portfolio of Tushar Soni - Business Analyst & Team Lead">
-      <title>Tushar Soni | Business Analyst</title>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-      <style>
-         * { margin: 0; padding: 0; box-sizing: border-box; }
-         html { scroll-behavior: smooth; }
-         body {
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="description" content="Portfolio of Tushar Soni - Business Analyst & Team Lead">
+   <title>Tushar Soni | Business Analyst</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      html {
+         scroll-behavior: smooth;
+      }
+
+      body {
          font-family: 'Inter', sans-serif;
          background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
          color: #fff;
          overflow-x: hidden;
-         }
-         #particles-js {
+      }
+
+      #particles-js {
          position: fixed;
-         top: 0; left: 0; width: 100%; height: 100%; z-index: -1;
-         }
-         header {
-         position: fixed; top: 0; width: 100%; z-index: 1000;
-         background: rgba(18,19,40,0.75);
-         border-bottom: 1px solid rgba(255,255,255,0.07);
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         z-index: -1;
+      }
+
+      header {
+         position: fixed;
+         top: 0;
+         width: 100%;
+         z-index: 1000;
+         background: rgba(18, 19, 40, 0.75);
+         border-bottom: 1px solid rgba(255, 255, 255, 0.07);
          backdrop-filter: blur(14px);
-         }
-         nav {
-         max-width: 1200px; margin: auto; padding: 1rem 2rem;
-         display: flex; justify-content: space-between; align-items: center;
-         }
-         .logo {
-         font-size: 1.8rem; font-weight: 800;
+      }
+
+      nav {
+         max-width: 1200px;
+         margin: auto;
+         padding: 1rem 2rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      .logo {
+         font-size: 1.8rem;
+         font-weight: 800;
          background: linear-gradient(to right, #667eea, #f093fb);
-         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-         }
-         .nav-items {
-         display: flex; align-items: center; gap: 1.2rem;
-         }
-         .nav-links {
-         list-style: none; display: flex; gap: 1.3rem; align-items: center;
-         }
-         .nav-links a, .resume-btn-header {
-         text-decoration: none; color: #e0e0e0; font-weight: 500; transition: 0.3s;
-         padding: 0.4rem 1rem; border-radius: 20px;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      .nav-items {
+         display: flex;
+         align-items: center;
+         gap: 1.2rem;
+      }
+
+      .nav-links {
+         list-style: none;
+         display: flex;
+         gap: 1.3rem;
+         align-items: center;
+      }
+
+      .nav-links a,
+      .resume-btn-header {
+         text-decoration: none;
+         color: #e0e0e0;
+         font-weight: 500;
+         transition: 0.3s;
+         padding: 0.4rem 1rem;
+         border-radius: 20px;
          display: block;
          border: none;
          background: none;
          font-family: inherit;
          cursor: pointer;
-         }
-         .nav-links a:hover, .nav-links .resume-btn-header:hover {
-         background: rgba(245,147,251,0.12); color: #fff;
-         }
-         .resume-btn-header {
+      }
+
+      .nav-links a:hover,
+      .nav-links .resume-btn-header:hover {
+         background: rgba(245, 147, 251, 0.12);
+         color: #fff;
+      }
+
+      .resume-btn-header {
          background: linear-gradient(90deg, #667eea, #f093fb 90%);
          color: #fff;
          font-weight: 700;
@@ -61,29 +104,35 @@
          padding: 0.5em 1.3em;
          margin-left: 1rem;
          font-size: 1.03rem;
-         box-shadow: 0 3px 15px 0 rgba(102,126,234,.11);
+         box-shadow: 0 3px 15px 0 rgba(102, 126, 234, .11);
          transition: background 0.3s, color 0.3s, transform 0.19s;
-         display: flex; align-items: center;
-         }
-         .resume-btn-header i {
+         display: flex;
+         align-items: center;
+      }
+
+      .resume-btn-header i {
          margin-right: 0.5em;
          font-size: 1.15em;
-         }
-         .resume-btn-header:hover, .resume-btn-header:focus {
+      }
+
+      .resume-btn-header:hover,
+      .resume-btn-header:focus {
          background: linear-gradient(90deg, #8f7ada, #e678e6 100%);
          color: #fff;
          transform: translateY(-2px) scale(1.03);
          text-decoration: none;
-         }
-         .menu-toggle {
+      }
+
+      .menu-toggle {
          display: none;
          flex-direction: column;
          justify-content: center;
          cursor: pointer;
          margin-left: 1.2rem;
          z-index: 1501;
-         }
-         .menu-toggle span {
+      }
+
+      .menu-toggle span {
          width: 27px;
          height: 3px;
          background: #d1bafc;
@@ -91,51 +140,217 @@
          border-radius: 2px;
          transition: 0.25s;
          display: block;
-         }
-         section {
+      }
+
+      section {
          max-width: 900px;
          margin: 0 auto;
          padding: 5.2rem 2rem 3rem 2rem;
-         }
-         .section-title {
-         font-size: 2.5rem; text-align: center; margin-bottom: 2rem;
+      }
+
+      .section-title {
+         font-size: 2.5rem;
+         text-align: center;
+         margin-bottom: 2rem;
          background: linear-gradient(90deg, #a18cd1, #fbc2eb);
-         -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
          font-weight: 800;
          letter-spacing: 0.4px;
-         }
-         .hero { min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:6.5rem 2rem 3rem 2rem;}
-         .hero-content {max-width:900px;margin:auto;}
-         .profile {width:190px;height:190px;margin:0 auto 1.8rem auto;border-radius:50%;
-         background:rgba(255,255,255,0.14);border:4px solid rgba(245,147,251,0.14);
-         box-shadow:0 8px 32px 0 rgba(31,38,135,0.18);display:flex;align-items:center;justify-content:center;overflow:hidden;}
-         .profile img {width:100%;border-radius: 50%;}
-         h1 {font-size:3.05rem;background:linear-gradient(to right, #f093fb, #667eea);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;margin-bottom:0.5rem;letter-spacing:0.3px;}
-         .subtitle {color:#fbc2eb;font-size:1.42rem;margin-bottom:1rem;}
-         .description {max-width:700px;margin:auto;line-height:1.7;font-size:1.13rem;}
-         .glass-card {background:rgba(32,38,68,0.80);box-shadow:0 8px 32px 0 rgba(31,38,135,0.19),0 2px 8px 0 rgba(100,126,234,0.08);
-         backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:2.6rem 2.2rem;border-radius:25px;border:1px solid rgba(255,255,255,0.14);
-         margin:0 auto 2.2rem auto;max-width:510px;text-align:center;}
-         .glass-card ul {list-style:none;padding:0;margin:0.7rem 0 0 0;text-align:center;}
-         .glass-card ul li {padding-bottom:.3rem;color:#e0d7fa;}
-         .exp-container {display:flex;flex-direction:column;align-items:center;gap:1.8rem;}
-         .experience-card {width:100%;max-width:540px;margin:0 auto;
-         background:rgba(32,38,68,0.78);box-shadow:0 4px 32px 0 rgba(102,126,234,0.13);border-radius:18px;
-         border:1.2px solid rgba(255,255,255,0.10);padding:2rem 2rem 1.1rem 2rem;position:relative;text-align:center;}
-         .experience-card:hover {box-shadow:0 10px 28px 0 rgba(102,126,234,0.28);}
-         .role-title {font-weight:700; font-size:1.2rem;letter-spacing:0.1px;
-         background:linear-gradient(90deg,#667eea,#f093fb 65%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-         .company {color:#e59dfb;font-weight:600;font-size:1.03rem;margin:0.1em;letter-spacing:0.07em;}
-         .exp-dates {color:#b8b8b8;font-size:.94rem;margin-bottom:.7rem;display:block;}
-         .exp-description {color:#e5e4ea;font-size:1.04rem;line-height:1.5;margin-bottom:.3em;}
-         .certs-grid, .projects-grid, .skills-grid, .contact-info {width:100%;}
-         .projects-grid, .skills-grid {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.15rem;list-style:none;padding:0;}
-         .certs-grid {display:flex;flex-wrap:wrap;justify-content:center;gap:1.1rem;margin:1.5rem 0 0 0;list-style:none;padding:0;}
-         .certs-grid li, .projects-grid li, .skills-grid li {background:rgba(255,255,255,.11);color:#e0d7fa;border-radius:13px;padding:1rem 1.1rem;text-align:center;}
-         .contact-info {display:grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap:2rem;text-align:center;}
-         .contact-item {background:rgba(255,255,255,0.06);padding:1.4rem;border-radius:11px;box-shadow:0 2px 16px 0 rgba(102,126,234,0.03);}
-         .contact-item a {color:#fbc2eb;text-decoration:none;}
-         .skills-section-group {
+      }
+
+      .hero {
+         min-height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         text-align: center;
+         padding: 6.5rem 2rem 3rem 2rem;
+      }
+
+      .hero-content {
+         max-width: 900px;
+         margin: auto;
+      }
+
+      .profile {
+         width: 190px;
+         height: 190px;
+         margin: 0 auto 1.8rem auto;
+         border-radius: 50%;
+         background: rgba(255, 255, 255, 0.14);
+         border: 4px solid rgba(245, 147, 251, 0.14);
+         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+      }
+
+      .profile img {
+         width: 100%;
+         border-radius: 50%;
+      }
+
+      h1 {
+         font-size: 3.05rem;
+         background: linear-gradient(to right, #f093fb, #667eea);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         font-weight: 800;
+         margin-bottom: 0.5rem;
+         letter-spacing: 0.3px;
+      }
+
+      .subtitle {
+         color: #fbc2eb;
+         font-size: 1.42rem;
+         margin-bottom: 1rem;
+      }
+
+      .description {
+         max-width: 700px;
+         margin: auto;
+         line-height: 1.7;
+         font-size: 1.13rem;
+      }
+
+      .glass-card {
+         background: rgba(32, 38, 68, 0.80);
+         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.19), 0 2px 8px 0 rgba(100, 126, 234, 0.08);
+         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+         padding: 2.6rem 2.2rem;
+         border-radius: 25px;
+         border: 1px solid rgba(255, 255, 255, 0.14);
+         margin: 0 auto 2.2rem auto;
+         max-width: 510px;
+         text-align: center;
+      }
+
+      .glass-card ul {
+         list-style: none;
+         padding: 0;
+         margin: 0.7rem 0 0 0;
+         text-align: center;
+      }
+
+      .glass-card ul li {
+         padding-bottom: .3rem;
+         color: #e0d7fa;
+      }
+
+      .exp-container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         gap: 1.8rem;
+      }
+
+      .experience-card {
+         width: 100%;
+         max-width: 540px;
+         margin: 0 auto;
+         background: rgba(32, 38, 68, 0.78);
+         box-shadow: 0 4px 32px 0 rgba(102, 126, 234, 0.13);
+         border-radius: 18px;
+         border: 1.2px solid rgba(255, 255, 255, 0.10);
+         padding: 2rem 2rem 1.1rem 2rem;
+         position: relative;
+         text-align: center;
+      }
+
+      .experience-card:hover {
+         box-shadow: 0 10px 28px 0 rgba(102, 126, 234, 0.28);
+      }
+
+      .role-title {
+         font-weight: 700;
+         font-size: 1.2rem;
+         letter-spacing: 0.1px;
+         background: linear-gradient(90deg, #667eea, #f093fb 65%);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+      }
+
+      .company {
+         color: #e59dfb;
+         font-weight: 600;
+         font-size: 1.03rem;
+         margin: 0.1em;
+         letter-spacing: 0.07em;
+      }
+
+      .exp-dates {
+         color: #b8b8b8;
+         font-size: .94rem;
+         margin-bottom: .7rem;
+         display: block;
+      }
+
+      .exp-description {
+         color: #e5e4ea;
+         font-size: 1.04rem;
+         line-height: 1.5;
+         margin-bottom: .3em;
+      }
+
+      .certs-grid,
+      .projects-grid,
+      .skills-grid,
+      .contact-info {
+         width: 100%;
+      }
+
+      .projects-grid,
+      .skills-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+         gap: 1.15rem;
+         list-style: none;
+         padding: 0;
+      }
+
+      .certs-grid {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         gap: 1.1rem;
+         margin: 1.5rem 0 0 0;
+         list-style: none;
+         padding: 0;
+      }
+
+      .certs-grid li,
+      .projects-grid li,
+      .skills-grid li {
+         background: rgba(255, 255, 255, .11);
+         color: #e0d7fa;
+         border-radius: 13px;
+         padding: 1rem 1.1rem;
+         text-align: center;
+      }
+
+      .contact-info {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 2rem;
+         text-align: center;
+      }
+
+      .contact-item {
+         background: rgba(255, 255, 255, 0.06);
+         padding: 1.4rem;
+         border-radius: 11px;
+         box-shadow: 0 2px 16px 0 rgba(102, 126, 234, 0.03);
+      }
+
+      .contact-item a {
+         color: #fbc2eb;
+         text-decoration: none;
+      }
+
+      .skills-section-group {
          /* Highlighted, gradient, clear gap for grouping */
          font-size: 1.16rem;
          font-weight: 800;
@@ -146,356 +361,511 @@
          -webkit-background-clip: text;
          -webkit-text-fill-color: transparent;
          letter-spacing: 0.5px;
+      }
+
+      .fade-in {
+         opacity: 0;
+         transform: translateY(60px);
+         transition: all 0.8s cubic-bezier(.25, .8, .25, 1);
+      }
+
+      .fade-in.visible {
+         opacity: 1;
+         transform: translateY(0);
+      }
+
+      footer {
+         text-align: center;
+         padding: 2.3rem 1rem 1.2rem 1rem;
+         font-size: 0.93rem;
+         background: rgba(0, 0, 0, 0.22);
+         color: #aaa;
+         margin-top: 1.8rem;
+         border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      @media (max-width:700px) {
+         .profile {
+            width: 130px;
+            height: 130px;
          }
-         .fade-in { opacity:0; transform: translateY(60px); transition: all 0.8s cubic-bezier(.25,.8,.25,1);}
-         .fade-in.visible { opacity:1; transform: translateY(0);}
-         footer {text-align:center;padding:2.3rem 1rem 1.2rem 1rem;font-size:0.93rem;background:rgba(0,0,0,0.22);color:#aaa;margin-top:1.8rem;border-top:1px solid rgba(255,255,255,0.06);}
-         @media (max-width:700px) {.profile {width:130px;height:130px;} nav {padding: 0.9rem 1rem;} h1 {font-size:2.1rem;} .glass-card, .experience-card {padding:1.1rem 0.85rem;} section{padding:4.2rem 0.7rem;}}
-         @media (max-width: 980px) { nav { padding: 1rem 0.7rem; } }
-         @media (max-width: 768px) {
-         .nav-items { flex-direction: row; }
-         .menu-toggle { display: flex; }
+
+         nav {
+            padding: 0.9rem 1rem;
+         }
+
+         h1 {
+            font-size: 2.1rem;
+         }
+
+         .glass-card,
+         .experience-card {
+            padding: 1.1rem 0.85rem;
+         }
+
+         section {
+            padding: 4.2rem 0.7rem;
+         }
+      }
+
+      @media (max-width: 980px) {
+         nav {
+            padding: 1rem 0.7rem;
+         }
+      }
+
+      @media (max-width: 768px) {
+         .nav-items {
+            flex-direction: row;
+         }
+
+         .menu-toggle {
+            display: flex;
+         }
+
          .nav-links {
-         position: absolute;
-         top: 64px;
-         left: 0;
-         right: 0;
-         background: rgba(26, 22, 68, 0.96);
-         flex-direction: column;
-         align-items: center;
-         gap: 0;
-         border-bottom: 1.5px solid #7773b6;
-         display: none;
-         z-index: 2000;
-         box-shadow: 0 8px 18px 0 rgba(50,50,90,0.14);
+            position: absolute;
+            top: 64px;
+            left: 0;
+            right: 0;
+            background: rgba(26, 22, 68, 0.96);
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+            border-bottom: 1.5px solid #7773b6;
+            display: none;
+            z-index: 2000;
+            box-shadow: 0 8px 18px 0 rgba(50, 50, 90, 0.14);
          }
+
          .nav-links li {
-         width: 100%;
-         text-align: center;
+            width: 100%;
+            text-align: center;
          }
-         .nav-links a, .resume-btn-header {
-         padding: 1.2rem 0;
-         font-size: 1.13rem;
-         border-radius: 0;
-         border-bottom: 1px solid #28244c66;
-         margin: 0;
-         text-align: center;
-         justify-content: center;
+
+         .nav-links a,
+         .resume-btn-header {
+            padding: 1.2rem 0;
+            font-size: 1.13rem;
+            border-radius: 0;
+            border-bottom: 1px solid #28244c66;
+            margin: 0;
+            text-align: center;
+            justify-content: center;
          }
+
          .nav-links .resume-btn-header {
-         margin: 0.9rem 0 0.9rem 0;
-         width: calc(100% - 2rem);
-         padding: 0.9em 0;
-         font-size: 1.11rem;
+            margin: 0.9rem 0 0.9rem 0;
+            width: calc(100% - 2rem);
+            padding: 0.9em 0;
+            font-size: 1.11rem;
          }
+
          .nav-links.show {
-         display: flex;
+            display: flex;
          }
-         }
-      </style>
-   </head>
-   <body>
-      <div id="particles-js"></div>
-      <header>
-         <nav>
-            <div class="logo">Tushar Soni</div>
-            <div class="nav-items">
-               <ul class="nav-links">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#experience">Experience</a></li>
-                  <li><a href="#projects">Projects</a></li>
-                  <li><a href="#skills">Skills</a></li>
-                  <li><a href="#certifications">Certifications</a></li>
-                  <li><a href="#contact">Contact</a></li>
-                  <li>
-                     <a href="Resume_Tushar_Soni.pdf" download class="resume-btn-header">
+      }
+   </style>
+</head>
+
+<body>
+   <div id="particles-js"></div>
+   <header>
+      <nav>
+         <div class="logo">Tushar Soni</div>
+         <div class="nav-items">
+            <ul class="nav-links">
+               <li><a href="#home">Home</a></li>
+               <li><a href="#about">About</a></li>
+               <li><a href="#experience">Experience</a></li>
+               <li><a href="#projects">Projects</a></li>
+               <li><a href="#skills">Skills</a></li>
+               <li><a href="#certifications">Certifications</a></li>
+               <li><a href="#contact">Contact</a></li>
+               <li>
+                  <a href="Resume_Tushar_Soni.pdf" download class="resume-btn-header">
                      <i class="bi bi-download"></i>Resume
-                     </a>
-                  </li>
-               </ul>
-               <div class="menu-toggle" id="menu-toggle">
-                  <span></span><span></span><span></span>
-               </div>
-            </div>
-         </nav>
-      </header>
-      <section class="hero" id="home">
-         <div class="hero-content">
-            <div class="profile">
-               <img src="https://raw.githubusercontent.com/tushsoni/tushar-portfolio/main/Pic_Tushar-Photoroom.png" alt="Tushar Soni">
-            </div>
-            <h1>Tushar Soni</h1>
-            <div class="subtitle">Business Analyst & Team Lead<br><span style="font-size:0.91em;color:#d6bcfa;">Noida, Uttar Pradesh, India</span></div>
-            <p class="description">Strategic IT Business Analyst skilled at leveraging data-driven analysis and process innovation to deliver solutions aligned with business objectives. Adept at gathering requirements, leading cross-functional teams, and driving digital transformation through AI/ML, modern BI, and seamless stakeholder engagement.</p>
-         </div>
-      </section>
-      <section id="about" class="fade-in">
-         <div class="glass-card">
-            <h2 class="section-title">About Me</h2>
-            <p>
-               I currently serve as a Business Analyst (Team Lead) at ANR Software Pvt. Ltd. (Altametrics), where I lead cutting-edge digital initiatives for McDonald's USA.<br><br>
-               <strong>Focus Areas:</strong>
-            <ul>
-               <li>AI/ML Model Design for workforce & operations optimization</li>
-               <li>Enterprise App Modernization, esp. eRestaurant HR, Labor & Payroll</li>
-               <li>Process Excellence through requirements analysis and continuous improvement</li>
-               <li>Project Management and full SDLC ownership</li>
-               <li>Stakeholder Consulting, translating business needs to scalable solutions</li>
+                  </a>
+               </li>
             </ul>
+            <div class="menu-toggle" id="menu-toggle">
+               <span></span><span></span><span></span>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <section class="hero" id="home">
+      <div class="hero-content">
+         <div class="profile">
+            <img src="https://raw.githubusercontent.com/tushsoni/tushar-portfolio/main/Pic_Tushar-Photoroom.png"
+               alt="Tushar Soni">
+         </div>
+         <h1>Tushar Soni</h1>
+         <div class="subtitle">Business Analyst & Team Lead<br><span style="font-size:0.91em;color:#d6bcfa;">Noida,
+               Uttar Pradesh, India</span></div>
+         <p class="description">Strategic IT Business Analyst skilled at leveraging data-driven analysis and process
+            innovation to deliver solutions aligned with business objectives. Adept at gathering requirements, leading
+            cross-functional teams, and driving digital transformation through AI/ML, modern BI, and seamless
+            stakeholder engagement.</p>
+      </div>
+   </section>
+   <section id="about" class="fade-in">
+      <div class="glass-card">
+         <h2 class="section-title">About Me</h2>
+         <p>
+            I currently serve as a Business Analyst (Team Lead) at ANR Software Pvt. Ltd. (Altametrics), where I lead
+            cutting-edge digital initiatives for McDonald's USA.<br><br>
+            <strong>Focus Areas:</strong>
+         <ul>
+            <li>AI/ML Model Design for workforce & operations optimization</li>
+            <li>Enterprise App Modernization, esp. eRestaurant HR, Labor & Payroll</li>
+            <li>Process Excellence through requirements analysis and continuous improvement</li>
+            <li>Project Management and full SDLC ownership</li>
+            <li>Stakeholder Consulting, translating business needs to scalable solutions</li>
+         </ul>
+         </p>
+         <h3 style="margin-top:1.5em;">🎓 Education</h3>
+         <ul>
+            <li>B.Tech in Computer Science, Amity University, Noida (2016–2020)</li>
+            <li>12th Grade, Children's Academy, Alwar (2015)</li>
+            <li>10th Grade, National Academy, Alwar (2013)</li>
+         </ul>
+      </div>
+   </section>
+   <section id="experience" class="fade-in">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="exp-container">
+         <div class="experience-card">
+            <div class="role-title">Business Analyst (Team Lead)</div>
+            <div class="company">ANR Software Private Limited (Altametrics)</div>
+            <span class="exp-dates">September 2022 – Present</span>
+            <p class="exp-description">
+               Lead eRestaurant product teams building innovative AI/ML features and intuitive UI for McDonald's USA.
+               Align IT solutions and roadmaps with key business goals and global client requirements. Oversee complete
+               SDLC; mentor technical teams; manage deliverables and process enhancements.
             </p>
-            <h3 style="margin-top:1.5em;">🎓 Education</h3>
-            <ul>
-               <li>B.Tech in Computer Science, Amity University, Noida (2016–2020)</li>
-               <li>12th Grade, Children's Academy, Alwar (2015)</li>
-               <li>10th Grade, National Academy, Alwar (2013)</li>
-            </ul>
          </div>
-      </section>
-      <section id="experience" class="fade-in">
-         <h2 class="section-title">Professional Experience</h2>
-         <div class="exp-container">
-            <div class="experience-card">
-               <div class="role-title">Business Analyst (Team Lead)</div>
-               <div class="company">ANR Software Private Limited (Altametrics)</div>
-               <span class="exp-dates">September 2022 – Present</span>
-               <p class="exp-description">
-                  Lead eRestaurant product teams building innovative AI/ML features and intuitive UI for McDonald's USA. Align IT solutions and roadmaps with key business goals and global client requirements. Oversee complete SDLC; mentor technical teams; manage deliverables and process enhancements.
-               </p>
-            </div>
-            <div class="experience-card">
-               <div class="role-title">Senior Product Analyst</div>
-               <div class="company">Vinculum Solutions Pvt. Ltd.</div>
-               <span class="exp-dates">May 2022 – July 2022</span>
-               <p class="exp-description">
-                  Managed Catalog Management System integrations for Amazon, Myntra, Flipkart, Fossil. Authored API docs, streamlined multi-marketplace SKU management, reduced catalog errors by 30%, and led agile stand-ups.
-               </p>
-            </div>
-            <div class="experience-card">
-               <div class="role-title">Product Analyst</div>
-               <div class="company">ANR Software Pvt. Ltd.</div>
-               <span class="exp-dates">January 2020 – April 2022</span>
-               <p class="exp-description">
-                  Optimized products/services for McDonald's USA, improving process efficiency and business value. Coordinated support and QA teams, ensured smooth deployments, and elevated user satisfaction.
-               </p>
-            </div>
+         <div class="experience-card">
+            <div class="role-title">Senior Product Analyst</div>
+            <div class="company">Vinculum Solutions Pvt. Ltd.</div>
+            <span class="exp-dates">May 2022 – July 2022</span>
+            <p class="exp-description">
+               Managed Catalog Management System integrations for Amazon, Myntra, Flipkart, Fossil. Authored API docs,
+               streamlined multi-marketplace SKU management, reduced catalog errors by 30%, and led agile stand-ups.
+            </p>
          </div>
-      </section>
-      <section id="projects" class="fade-in">
-         <h2 class="section-title">Key Projects</h2>
-         <ul class="projects-grid">
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Core Shift</span><br>
-               Developed a machine learning model that analyzes previous weeks' employee schedules created by managers to automatically generate optimized schedules for upcoming week.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">AI Forecast</span><br>
-               Designed and implemented a machine learning/AI and mathematical optimization solution that improves workforce forecasting accuracy and scheduling efficiency in an Altametrics Environment. The model predicted labor hours, Transactions, Forecasted Sales using historical data and optimized staffing schedules using business constraints and labor cost limits.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Auto Skill Upgrade</span><br>
-               Designed an AI-based solution that evaluates employees' scheduled hours and recommends skill level upgrades to managers based on scheduled hours on particular job codes.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Position Guide</span><br>
-               Created a labor percentage model that schedules employees based on labor cost trends from previous weeks, added visual dashboards and graphs to analyze shifts, labor percentages, and weekly scheduling insights effectively.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Smart Clock</span><br>
-               Secure, AI-driven Face ID time clock for contactless attendance & compliance.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">eRestaurant UI/Dashboards</span><br>
-               Enhanced the eRestaurant product by redesigning user-friendly interfaces for key modules, including HR, Timekeeping, Labor, Payroll, and Scheduling. Introduced a new Dashboard tab in each module, featuring interactive graphs to provide business insights and support cost-saving strategies.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Mobile App Enhancements</span><br>
-               Improved mobile applications such as Altametrics DAR, Schedule, and Clock by integrating new features based on user feedback and introducing additional functionalities aimed at boosting business productivity.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Time Loss and Labor Dashboard</span><br>
-               Developed an advanced dashboard tool capable of identifying inefficiencies, resulting in potential savings of up to $1,000 per week.
-            </li>
-            <li class="project-card">
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Catalog Management System</span><br>
-               API automation for SKU listing and product data consistency across online marketplaces.
-            </li>
-         </ul>
-      </section>
-      <section id="certifications" class="fade-in">
-         <h2 class="section-title">Power BI Projects</h2>
-         <ul class="certs-grid">
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Zomato Restaurant Analysis</span><br><br>
-               This interactive Power BI dashboard provides a comprehensive overview of restaurant performance metrics based on Zomato data across multiple cities in India. It enables users to analyze restaurant trends, cost distribution, cuisine popularity, online delivery patterns, and more.    
-               <br></br>
-               <div class="contact-item">
-                  <a href="Screenshot_Zomato_Dashboard.png" download>🖼️ Dashboard Snapshot</a>
-                  <a href="https://github.com/tushsoni/PowerBI-ZomatoRestaurantAnalysis" target="_blank">🔗 Github Repository Link</a>
-               </div>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">McDonald’s USA Franchisee Altametrics AI Forecast VS Third Party Vendor Projection Data
+         <div class="experience-card">
+            <div class="role-title">Product Analyst</div>
+            <div class="company">ANR Software Pvt. Ltd.</div>
+            <span class="exp-dates">January 2020 – April 2022</span>
+            <p class="exp-description">
+               Optimized products/services for McDonald's USA, improving process efficiency and business value.
+               Coordinated support and QA teams, ensured smooth deployments, and elevated user satisfaction.
+            </p>
+         </div>
+      </div>
+   </section>
+   <section id="projects" class="fade-in">
+      <h2 class="section-title">Key Projects</h2>
+      <ul class="projects-grid">
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Core
+               Shift</span><br>
+            Developed a machine learning model that analyzes previous weeks' employee schedules created by managers to
+            automatically generate optimized schedules for upcoming week.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">AI
+               Forecast</span><br>
+            Designed and implemented a machine learning/AI and mathematical optimization solution that improves
+            workforce forecasting accuracy and scheduling efficiency in an Altametrics Environment. The model predicted
+            labor hours, Transactions, Forecasted Sales using historical data and optimized staffing schedules using
+            business constraints and labor cost limits.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Auto
+               Skill Upgrade</span><br>
+            Designed an AI-based solution that evaluates employees' scheduled hours and recommends skill level upgrades
+            to managers based on scheduled hours on particular job codes.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Position
+               Guide</span><br>
+            Created a labor percentage model that schedules employees based on labor cost trends from previous weeks,
+            added visual dashboards and graphs to analyze shifts, labor percentages, and weekly scheduling insights
+            effectively.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Smart
+               Clock</span><br>
+            Secure, AI-driven Face ID time clock for contactless attendance & compliance.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">eRestaurant
+               UI/Dashboards</span><br>
+            Enhanced the eRestaurant product by redesigning user-friendly interfaces for key modules, including HR,
+            Timekeeping, Labor, Payroll, and Scheduling. Introduced a new Dashboard tab in each module, featuring
+            interactive graphs to provide business insights and support cost-saving strategies.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Mobile
+               App Enhancements</span><br>
+            Improved mobile applications such as Altametrics DAR, Schedule, and Clock by integrating new features based
+            on user feedback and introducing additional functionalities aimed at boosting business productivity.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Time
+               Loss and Labor Dashboard</span><br>
+            Developed an advanced dashboard tool capable of identifying inefficiencies, resulting in potential savings
+            of up to $1,000 per week.
+         </li>
+         <li class="project-card">
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Catalog
+               Management System</span><br>
+            API automation for SKU listing and product data consistency across online marketplaces.
+         </li>
+      </ul>
+   </section>
+   <section id="certifications" class="fade-in">
+      <h2 class="section-title">Power BI Projects</h2>
+      <ul class="certs-grid">
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Zomato
+               Restaurant Analysis</span><br><br>
+            This interactive Power BI dashboard provides a comprehensive overview of restaurant performance metrics
+            based on Zomato data across multiple cities in India. It enables users to analyze restaurant trends, cost
+            distribution, cuisine popularity, online delivery patterns, and more.
+            <br></br>
+            <div class="contact-item">
+               <a href="Screenshot_Zomato_Dashboard.png" download>🖼️ Dashboard Snapshot</a>
+               <a href="https://github.com/tushsoni/PowerBI-ZomatoRestaurantAnalysis" target="_blank">🔗 Github
+                  Repository Link</a>
+            </div>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">McDonald’s
+               USA Franchisee Altametrics AI Forecast VS Third Party Vendor Projection Data
                Analysis
-               </span><br><br>
-               This Power BI dashboard provides a comprehensive week-over-week comparison of store performance metrics for the first week of July 2024 vs July 2025 across key operational areas.<br></br>
-               <div class="contact-item">
-                  <a href="Screenshot_Store_Performance_Dashboard.png" download>🖼️ Dashboard Snapshot</a>
-                  <a href="https://github.com/tushsoni/PowerBI-StorePerformanceDashboard" target="_blank">🔗 Github Repository Link</a>
-               </div>
-            </li>
-         </ul>
-      </section>
-      <section id="skills" class="fade-in">
-         <h2 class="section-title">Skills</h2>
-         <div class="skills-section-group">Technical, Analytical &amp; BA Methods</div>
-         <ul class="skills-grid">
-            <li>Business Process Modeling (BPMN, UML)</li>
-            <li>Requirements Engineering, Elicitation (Interviews, JAD/RAD, Workshops)</li>
-            <li>Data Analysis &amp; Visualization (Excel, Power BI, Tableau, Looker Studio)</li>
-            <li>Database Management (SQL, MySQL, Oracle, PostgreSQL, MongoDB)</li>
-            <li>Advanced Reporting &amp; KPI Dashboards</li>
-            <li>SDLC, STLC, Agile, Scrum, Kanban, Waterfall</li>
-            <li>System Design &amp; API Integration (REST, SOAP, Postman, Swagger)</li>
-            <li>User Acceptance Testing (UAT Design &amp; Coordination)</li>
-         </ul>
-         <div class="skills-section-group">Consulting, Project &amp; Soft Skills</div>
-         <ul class="skills-grid">
-            <li>Stakeholder Engagement &amp; Communication</li>
-            <li>Cross-Functional Team Leadership</li>
-            <li>Project Management, Planning</li>
-            <li>Change Management &amp; Training</li>
-            <li>Risk Assessment &amp; Mitigation (RCA, SWOT, Cost-Benefit)</li>
-            <li>Problem Solving &amp; Critical Thinking</li>
-            <li>Requirements Traceability (RTM), Documentation</li>
-            <li>Negotiation &amp; Conflict Resolution</li>
-            <li>Gap Analysis &amp; Continuous Improvement</li>
-         </ul>
-         <div class="skills-section-group">Tools, Platforms &amp; Domain Knowledge</div>
-         <ul class="skills-grid">
-            <li>JIRA, Trello, Confluence, MS Project</li>
-            <li>Figma, Miro, Lucidchart, Draw.io</li>
-            <li>Power BI, Tableau, Looker Studio</li>
-            <li>Microsoft Office Suite (Word, Excel, PPT)</li>
-            <li>Postman, Swagger, API Test Clients</li>
-            <li>Zoom, Teams, Slack, Google Workspace</li>
-            <li>AWS, Azure (Cloud)</li>
-            <li>IT Infrastructure, Retail, E-commerce, Food Service</li>
-         </ul>
-      </section>
-      <section id="certifications" class="fade-in">
-         <h2 class="section-title">Certifications & Achievements</h2>
-         <ul class="certs-grid">
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Data Analysis with Python (IBM through Simplilearn, July 2025)</span><br><br>
-               <div class="contact-item">
-                  <a href="https://courses.skillsnet.simplilearn.com/certificates/089962eb18954626ab408683c9a809e5" target="_blank">📄 Certificate Link</a>
-                  <a href="https://github.com/tushsoni/AppRatingPrediction" target="_blank">🔗 Github Repository Link</a>
-               </div>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Mathematical Optimization for Business Problems (IBM through Simplilearn, July 2025)</span><br><br>
-               <div class="contact-item">
-                  <a href="https://courses.skillsnet.simplilearn.com/certificates/048b613e229b41ffbc70bdf221a2be4d" target="_blank">📄 Certificate Link</a>
-                  <a href="https://github.com/tushsoni/MathematicalOptimizationForBusinessProblems" target="_blank">🔗 Github Repository Link</a>
-               </div>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Project Management (Oxford Home Study Centre, 2024)</span><br>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Employee of the Month (ANR Software, May 2023)</span><br>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Advanced Google Analytics (Google, 2022)</span><br>
-            </li>
-            <li>
-               <span style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Google Analytics for Beginners (Google, 2022)</span><br>
-            </li>
-         </ul>
-      </section>
-      <section id="contact" class="fade-in">
-         <h2 class="section-title">Contact</h2>
-         <div class="contact-info">
+            </span><br><br>
+            This Power BI dashboard provides a comprehensive week-over-week comparison of store performance metrics for
+            the first week of July 2024 vs July 2025 across key operational areas.<br></br>
             <div class="contact-item">
-               <i class="bi bi-envelope"></i><br>
-               <strong>Email</strong><br>
-               <a href="mailto:tusshsoni@gmail.com">tusshsoni@gmail.com</a>
+               <a href="Screenshot_Store_Performance_Dashboard.png" download>🖼️ Dashboard Snapshot</a>
+               <a href="https://github.com/tushsoni/PowerBI-StorePerformanceDashboard" target="_blank">🔗 Github
+                  Repository Link</a>
             </div>
+         </li>
+
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Udemy
+               Course Learning Analytics
+            </span><br><br>
+            This Power BI project presents an insightful Udemy Course Learning Analytics Dashboard, built using a
+            fictional learning dataset. The dashboard is designed to track and visualize student performance, learning
+            behaviors, and course popularity for a data-driven education platform like Udemy.<br></br>
             <div class="contact-item">
-               <i class="bi bi-telephone"></i><br>
-               <strong>Phone</strong><br>
-               <a href="tel:+919680266559">+91 9680266559</a>
+               <a href="Snapshot_UdemyCourseLearningAnalytics.png" download>🖼️ Dashboard Snapshot</a>
+               <a href="https://github.com/tushsoni/PowerBI-UdemyCourseLearningAnalytics" target="_blank">🔗 Github
+                  Repository Link</a>
             </div>
+         </li>
+
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Financial
+               Loss McDonalds USA Franchisee
+            </span><br><br>
+            This Power BI report presents a comprehensive financial loss analysis across multiple stores, helping
+            operations and HR teams monitor and reduce labor inefficiencies that lead to monetary losses. The dashboard
+            is fully interactive with filtering capabilities across store numbers, business dates, and
+            locations.<br></br>
             <div class="contact-item">
-               <i class="bi bi-linkedin"></i><br>
-               <strong>LinkedIn</strong><br>
-               <a href="https://linkedin.com/in/tushar-soni-5a77a8188" target="_blank">tushar-soni</a>
+               <a href="Snapshot_Financial_Loss_Report_McDonalds.png" download>🖼️ Dashboard Snapshot</a>
+               <a href="https://github.com/tushsoni/PowerBI-FinancialLossReportMcD" target="_blank">🔗 Github
+                  Repository Link</a>
             </div>
+         </li>
+
+      </ul>
+   </section>
+   <section id="skills" class="fade-in">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-section-group">Technical, Analytical &amp; BA Methods</div>
+      <ul class="skills-grid">
+         <li>Business Process Modeling (BPMN, UML)</li>
+         <li>Requirements Engineering, Elicitation (Interviews, JAD/RAD, Workshops)</li>
+         <li>Data Analysis &amp; Visualization (Excel, Power BI, Tableau, Looker Studio)</li>
+         <li>Database Management (SQL, MySQL, Oracle, PostgreSQL, MongoDB)</li>
+         <li>Advanced Reporting &amp; KPI Dashboards</li>
+         <li>SDLC, STLC, Agile, Scrum, Kanban, Waterfall</li>
+         <li>System Design &amp; API Integration (REST, SOAP, Postman, Swagger)</li>
+         <li>User Acceptance Testing (UAT Design &amp; Coordination)</li>
+      </ul>
+      <div class="skills-section-group">Consulting, Project &amp; Soft Skills</div>
+      <ul class="skills-grid">
+         <li>Stakeholder Engagement &amp; Communication</li>
+         <li>Cross-Functional Team Leadership</li>
+         <li>Project Management, Planning</li>
+         <li>Change Management &amp; Training</li>
+         <li>Risk Assessment &amp; Mitigation (RCA, SWOT, Cost-Benefit)</li>
+         <li>Problem Solving &amp; Critical Thinking</li>
+         <li>Requirements Traceability (RTM), Documentation</li>
+         <li>Negotiation &amp; Conflict Resolution</li>
+         <li>Gap Analysis &amp; Continuous Improvement</li>
+      </ul>
+      <div class="skills-section-group">Tools, Platforms &amp; Domain Knowledge</div>
+      <ul class="skills-grid">
+         <li>JIRA, Trello, Confluence, MS Project</li>
+         <li>Figma, Miro, Lucidchart, Draw.io</li>
+         <li>Power BI, Tableau, Looker Studio</li>
+         <li>Microsoft Office Suite (Word, Excel, PPT)</li>
+         <li>Postman, Swagger, API Test Clients</li>
+         <li>Zoom, Teams, Slack, Google Workspace</li>
+         <li>AWS, Azure (Cloud)</li>
+         <li>IT Infrastructure, Retail, E-commerce, Food Service</li>
+      </ul>
+   </section>
+   <section id="certifications" class="fade-in">
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <ul class="certs-grid">
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Data
+               Analysis with Python (IBM through Simplilearn, July 2025)</span><br><br>
             <div class="contact-item">
-               <i class="bi bi-geo-alt"></i><br>
-               <strong>Location</strong><br>
-               Noida, Uttar Pradesh, India
+               <a href="https://courses.skillsnet.simplilearn.com/certificates/089962eb18954626ab408683c9a809e5"
+                  target="_blank">📄 Certificate Link</a>
+               <a href="https://github.com/tushsoni/AppRatingPrediction" target="_blank">🔗 Github Repository Link</a>
             </div>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Mathematical
+               Optimization for Business Problems (IBM through Simplilearn, July 2025)</span><br><br>
             <div class="contact-item">
-               <i class="bi bi-file-earmark-person"></i><br>
-               <strong>Resume</strong><br>
-               <a href="Resume_Tushar_Soni.pdf" download>📄 Download Resume (PDF)</a>
+               <a href="https://courses.skillsnet.simplilearn.com/certificates/048b613e229b41ffbc70bdf221a2be4d"
+                  target="_blank">📄 Certificate Link</a>
+               <a href="https://github.com/tushsoni/MathematicalOptimizationForBusinessProblems" target="_blank">🔗
+                  Github Repository Link</a>
             </div>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Project
+               Management (Oxford Home Study Centre, 2024)</span><br>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Employee
+               of the Month (ANR Software, May 2023)</span><br>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Advanced
+               Google Analytics (Google, 2022)</span><br>
+         </li>
+         <li>
+            <span
+               style="font-weight:700; background:linear-gradient(90deg, #e387fc, #667eea); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">Google
+               Analytics for Beginners (Google, 2022)</span><br>
+         </li>
+      </ul>
+   </section>
+   <section id="contact" class="fade-in">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-info">
+         <div class="contact-item">
+            <i class="bi bi-envelope"></i><br>
+            <strong>Email</strong><br>
+            <a href="mailto:tusshsoni@gmail.com">tusshsoni@gmail.com</a>
          </div>
-      </section>
-      <footer>
-         &copy; 2025 Tushar Soni. All rights reserved.<br>
-      </footer>
-      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-      <script>
-         particlesJS("particles-js", {
-           particles: {
-             number: { value: 62 },
-             color: { value: "#ffffff" },
-             shape: { type: "circle" },
-             opacity: { value: 0.10 },
-             size: { value: 3 },
-             line_linked: {
+         <div class="contact-item">
+            <i class="bi bi-telephone"></i><br>
+            <strong>Phone</strong><br>
+            <a href="tel:+919680266559">+91 9680266559</a>
+         </div>
+         <div class="contact-item">
+            <i class="bi bi-linkedin"></i><br>
+            <strong>LinkedIn</strong><br>
+            <a href="https://linkedin.com/in/tushar-soni-5a77a8188" target="_blank">tushar-soni</a>
+         </div>
+         <div class="contact-item">
+            <i class="bi bi-geo-alt"></i><br>
+            <strong>Location</strong><br>
+            Noida, Uttar Pradesh, India
+         </div>
+         <div class="contact-item">
+            <i class="bi bi-file-earmark-person"></i><br>
+            <strong>Resume</strong><br>
+            <a href="Resume_Tushar_Soni.pdf" download>📄 Download Resume (PDF)</a>
+         </div>
+      </div>
+   </section>
+   <footer>
+      &copy; 2025 Tushar Soni. All rights reserved.<br>
+   </footer>
+   <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+   <script>
+      particlesJS("particles-js", {
+         particles: {
+            number: { value: 62 },
+            color: { value: "#ffffff" },
+            shape: { type: "circle" },
+            opacity: { value: 0.10 },
+            size: { value: 3 },
+            line_linked: {
                enable: true,
                distance: 120,
                color: "#fbc2eb",
                opacity: 0.09,
                width: 1
-             },
-             move: { enable: true, speed: 1 }
-           },
-           interactivity: {
-             events: {
+            },
+            move: { enable: true, speed: 1 }
+         },
+         interactivity: {
+            events: {
                onhover: { enable: true, mode: "repulse" }
-             },
-             modes: {
+            },
+            modes: {
                repulse: { distance: 100 }
-             }
-           },
-           retina_detect: true
+            }
+         },
+         retina_detect: true
+      });
+      document.addEventListener('DOMContentLoaded', function () {
+         const toggleBtn = document.getElementById('menu-toggle');
+         const navLinks = document.querySelector('.nav-links');
+         toggleBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
          });
-         document.addEventListener('DOMContentLoaded', function() {
-           const toggleBtn = document.getElementById('menu-toggle');
-           const navLinks = document.querySelector('.nav-links');
-           toggleBtn.addEventListener('click', function () {
-             navLinks.classList.toggle('show');
-           });
-           navLinks.addEventListener('click', function(e){
-             if(e.target.tagName==="A" && window.innerWidth<=768) {
+         navLinks.addEventListener('click', function (e) {
+            if (e.target.tagName === "A" && window.innerWidth <= 768) {
                navLinks.classList.remove('show');
-             }
-           });
-           const fadeEls = document.querySelectorAll('.fade-in');
-           const reveal = () => {
-             for(const el of fadeEls) {
-               const rect = el.getBoundingClientRect();
-               if(rect.top < window.innerHeight - 40) el.classList.add('visible');
-             }
-           };
-           window.addEventListener('scroll', reveal);
-           reveal();
+            }
          });
-      </script>
-   </body>
+         const fadeEls = document.querySelectorAll('.fade-in');
+         const reveal = () => {
+            for (const el of fadeEls) {
+               const rect = el.getBoundingClientRect();
+               if (rect.top < window.innerHeight - 40) el.classList.add('visible');
+            }
+         };
+         window.addEventListener('scroll', reveal);
+         reveal();
+      });
+   </script>
+</body>
+
 </html>
