@@ -1,672 +1,738 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Tushar Soni | Business Analyst</title>
-  <meta name="description" content="Portfolio of Tushar Soni - Business Analyst & Team Lead. AI/ML, API & Business Analysis Expert.">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --clr-primary: #1a1a2e;
-      --clr-secondary: #0f3460;
-      --clr-accent1: #31e0ae;
-      --clr-accent2: #4a90e2;
-      --clr-accent3: #ae67fa;
-      --clr-highlight: #30e1c0;
-      --clr-dark: #222831;
-      --clr-soft: #667e9b;
-      --clr-light: #fff;
-      --clr-bg: #f9fbfd;
-      --clr-panel: #fff;
-      --clr-glass: rgba(255,255,255,0.8);
-      --radius: 18px;
-      --shadow: 0 8px 30px rgba(39, 191, 163, 0.08), 0 3px 12px rgba(102, 126, 234, 0.05);
-      --shadow-hero: 0 15px 60px 10px rgba(102, 121, 250, 0.12);
-      --profile-size: 228px;
-      --trans: .3s ease-in-out;
-      --header-height: 80px;
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-    }
-    html, body { height:100%; margin:0; padding:0; font-family:'Inter',sans-serif; background:var(--clr-bg); scroll-behavior: smooth;}
-    body { color:var(--clr-dark); line-height: 1.6; padding-top: var(--header-height); }
-    a { text-decoration:none; color:inherit; }
-
-    /* Fix header overlap on scroll */
-    .hero-main, #dashboard, #experience, #skills, #projects, #certifications, #contact {
-      scroll-margin-top: calc(var(--header-height) + 1.5rem);
-    }
-
-    header {
-      width:100vw; background: var(--clr-panel); position:fixed;top:0;z-index:12; box-shadow:0 2px 12px rgba(173,203,228,0.15);
-      transition:box-shadow var(--trans); height: var(--header-height);
-    }
-    nav {
-      max-width:1220px; margin:0 auto; padding:1.2rem 2rem;
-      display:flex;justify-content:space-between;align-items:center;
-    }
-    .logo-head {
-      font-weight:900; font-size:1.5rem;
-      background:linear-gradient(90deg, var(--clr-accent1) 55%, var(--clr-accent2) 90%);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      letter-spacing:1px; user-select: none;
-      font-family: 'Poppins', sans-serif;
-    }
-    .nav-links {
-      list-style:none;display:flex;gap:1.5rem;align-items:center;font-size:1.06rem;font-weight:600;margin:0;padding:0;
-    }
-    .nav-links a, .resume-btn-header {
-      color: var(--clr-dark); padding:7px 15px; border-radius:16px; transition: box-shadow var(--trans), background var(--trans), color var(--trans);
-      font-family: 'Poppins', sans-serif;
-    }
-    .nav-links a:hover { background: #f0f8ff; color:var(--clr-accent2); }
-    .resume-btn-header {
-      border:none; background:linear-gradient(90deg, var(--clr-accent1) 50%, var(--clr-accent2));
-      color:#fff;margin-left:.8rem;box-shadow:0 2px 12px rgba(82, 236, 209, 0.4);
-      padding:9px 25px;font-weight:700;font-size:1rem;display:flex;align-items:center;
-      transition: all var(--trans);
-    }
-    .resume-btn-header:hover {
-      box-shadow: 0 5px 20px rgba(82, 236, 209, 0.6);
-      transform: translateY(-2px);
-    }
-    .resume-btn-header i {margin-right:0.6em;font-size:1.18em;}
-
-    /* HERO */
-    .hero-main {
-      display:flex;align-items:center;justify-content:space-between;
-      max-width:1250px;margin:3.5rem auto 2.5rem auto;min-height:550px;gap:3rem;
-      padding:2rem;
-      background: linear-gradient(97deg, #fff 68%, #eefbf7 98%);
-      box-shadow: var(--shadow-hero);
-      border-radius:32px;
-    }
-    .left-col-hero {
-      flex:1;min-width:320px;max-width:650px;display:flex;flex-direction:column;align-items:flex-start;
-    }
-    .hero-greet {color:var(--clr-accent1);font-weight:600;font-size:1.2rem;letter-spacing:0.5px;}
-    .hero-title {
-      font-size:3.2rem;font-weight:900;line-height:1.2;letter-spacing:0.01em;
-      background:linear-gradient(90deg,var(--clr-accent1) 22%,var(--clr-accent3) 99%);display:inline;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
-      margin: .1em 0 .1em 0;
-    }
-    .hero-tagline { color: var(--clr-accent2); font-size:1.15rem;margin-bottom:.2em;font-weight:700; }
-    .hero-summary { font-size:1.25rem; color:var(--clr-soft); margin-bottom:.8em; }
-    .hero-desc { font-size:1.15rem; color:#6a7996;margin-bottom:1.2em;}
-    .cta-row { display:flex;gap:1.2rem; }
-    .cta-btn, .cta-btn-secondary {
-      border:none; border-radius:13px; font-weight:700; font-size:1.15rem;
-      padding: 0.83em 1.7em; cursor:pointer;box-shadow:0 2px 18px rgba(106, 198, 253, 0.15);
-      letter-spacing:.01em;outline:none;transition:all var(--trans);
-    }
-    .cta-btn { background: linear-gradient(90deg,var(--clr-accent1), #53ecea 88%); color:var(--clr-dark); }
-    .cta-btn:hover { transform: translateY(-2px); box-shadow:0 5px 25px rgba(83, 236, 234, 0.4); }
-    .cta-btn-secondary { background:#fff;border:1.5px solid var(--clr-accent1); color: var(--clr-accent1);}
-    .cta-btn-secondary:hover { transform: translateY(-2px); box-shadow:0 5px 25px rgba(49, 224, 174, 0.2); }
-    .right-col-hero{flex:0 0 var(--profile-size);display:flex;flex-direction:column;align-items:center;min-width:240px;}
-    .profile-circle{width:var(--profile-size);height:var(--profile-size);border-radius:50%;background:#edf8f4;box-shadow:0 3px 22px rgba(119, 140, 214, 0.1);border:6px solid #b6ffeb;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1.35em;}
-    .profile-circle img{width:100%;height:100%;object-fit:cover;object-position: top; /* This is the new fix */}
-    .badge-row {margin-top:-27px;display:flex; align-items:center;flex-direction:column;}
-    .expert-badge{
-      color:#fff;
-      background: linear-gradient(90deg, var(--clr-accent1) 63%, var(--clr-accent3) 99%);
-      border-radius:45px;
-      padding:0.41em 1.11em;
-      font-size:1.1rem;font-weight:800;
-      box-shadow:0 2px 15px rgba(0, 181, 134, 0.1);
-      margin-bottom:0.2em;letter-spacing:0.01em;
-      z-index:2; position:relative;}
-    .expert-badge small{display:block;font-size:.83em;font-weight:700;color:#daf7ec;}
-    /* SECTIONS */
-    .section-title {
-      font-size: 1.5rem;
-      font-weight: 800;
-      margin-bottom: 1.5em;
-      background: linear-gradient(90deg, var(--clr-accent1), var(--clr-accent2) 91%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      font-family: 'Poppins', sans-serif;
-    }
-    .section-container {
-      max-width: 1200px;
-      margin: 3.5em auto 2.5em auto;
-      padding: 0 2rem;
-    }
-    /* DASHBOARD CARDS */
-    .dashboard-section {
-      display:flex;gap:2.2em;align-items:flex-start;flex-wrap:wrap;
-    }
-    .dashboard-column {
-      flex:1;display:flex;flex-direction:column;gap:1.2em;min-width:310px;max-width:505px;}
-    .dash-card {
-      background:var(--clr-panel);border-radius:var(--radius);
-      box-shadow:var(--shadow);border:1.8px solid #cdf5ed;
-      display:flex;gap:1.15em;align-items:flex-start;padding:1.4em 1.6em;position:relative;min-height:72px;
-      transition: transform var(--trans), box-shadow var(--trans);
-    }
-    .dash-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
-    }
-    .dash-icon{
-      width:48px;height:48px;border-radius:50%;
-      display:flex;align-items:center;justify-content:center;
-      font-size:1.6rem;flex-shrink:0;color:#fff;margin-top:0.12em;
-    }
-    .dash-icon.prof{background:linear-gradient(120deg,var(--clr-accent1),#19a8ad);}
-    .dash-icon.edu{background:linear-gradient(120deg,var(--clr-accent2),#a18cd1);}
-    .dash-icon.fa{background:linear-gradient(120deg,var(--clr-accent3),#fb8c8c);}
-    .dash-content {flex:1;}
-    .dash-content strong{color: var(--clr-dark); font-size: 1.1rem; font-weight: 700; font-family: 'Poppins', sans-serif;}
-    .dash-content p, .dash-content ul { font-size: 1.05rem; color: var(--clr-soft); }
-    .dash-content ul{margin:0.25em 0 0 .95em;}
-    .cta-row-dashboard{margin-top:1.1em;}
-    /* TIMELINE/EXPERIENCE */
-    .exp-section {
-      border-radius:var(--radius);
-      background:var(--clr-panel);
-      box-shadow: var(--shadow);padding:2em 2em 1.5em 2em;
-      border:1.6px solid #e1f4f9;
-    }
-    .exp-row{border-left:4.5px solid #bbefe3;margin:0 0 2em 0;padding:0 0 0 1.5em;position:relative;}
-    .exp-marker{position:absolute;left:-23px;top:10px;width:32px;height:32px;border-radius:50%;background:#caf9ed;display:flex;align-items:center;justify-content:center;font-size:1.5em;color:var(--clr-accent2);box-shadow:0 2px 8px rgba(202, 249, 237, 0.6);border: 2.7px solid #fff;}
-    .exp-role{font-weight:800;color:var(--clr-accent2);font-family: 'Poppins', sans-serif;}
-    .exp-company{font-weight:600;color:var(--clr-dark);font-family: 'Poppins', sans-serif;}
-    .exp-dates{color:#97a1bb;font-size:1rem;}
-    .exp-desc{margin:.28em 0 0.28em 0; color:var(--clr-soft);}
-    /* SKILLS */
-    .skills-grid-section{display:grid;gap:1.5em;grid-template-columns:repeat(auto-fit,minmax(335px,1fr));}
-    .skills-card {
-      background:var(--clr-panel);border-radius:var(--radius);
-      box-shadow: var(--shadow);padding:1.4em;min-width:220px;
-      border:1.45px solid #e0f4ee;
-      transition: transform var(--trans), box-shadow var(--trans);
-    }
-    .skills-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
-    }
-    .skills-card-title {
-      color:var(--clr-accent2);font-size:1.15em;font-weight:700;margin-bottom:0.6em;display:flex;align-items:center;gap:.6em;
-      font-family: 'Poppins', sans-serif;
-    }
-    .skills-tags{display:flex;flex-wrap:wrap;gap:0.7em;margin-bottom:.46em;}
-    .tag {padding:0.35em 1.1em;border-radius:20px;font-size:0.95em;font-weight:600;background:#e9fdf6;color:var(--clr-dark);border: 1px solid #c9f5e3;}
-    /* GRID for projects/certs */
-    .grid-main {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
-      gap:1.5em 1.8em;
-      list-style: none;
-      padding-left: 0;
-    }
-    .grid-main li {
-      background:var(--clr-panel);
-      border-radius:15px;box-shadow: 0 2px 11px rgba(204, 204, 204, 0.1);
-      border:1.2px solid #e0f4ee;
-      padding:22px 20px;
-      color:#33407f;
-      list-style:none;margin-bottom:0;min-width:220px;
-      transition:box-shadow var(--trans), transform var(--trans);
-    }
-    .grid-main li:hover{
-      box-shadow:0 8px 32px rgba(49, 224, 174, 0.1);
-      transform: translateY(-5px);
-    }
-    .proj-title,.cert-title{color:var(--clr-accent2);font-weight:800;font-family: 'Poppins', sans-serif;}
-    .cert-title + a, .proj-title + a{margin-left:.54em;}
-    /* Contact Cards */
-    .contact-grid {
-      display:grid; gap: 1.5rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-      max-width:1000px;margin-left:auto;margin-right:auto;
-    }
-    .contact-card {
-      background:#f3fefa;border:1.2px solid #caf9ed;border-radius:13px;padding:1.4em 1.2em;text-align:center;color:#26aaa2;box-shadow:0 2px 11px rgba(39, 191, 163, 0.1);font-size:1.07rem;
-      transition: transform var(--trans), box-shadow var(--trans);
-    }
-    .contact-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
-    }
-    .contact-card i{font-size:1.3em; margin-bottom: 0.5em;}
-    .contact-card b {font-family: 'Poppins', sans-serif; font-size: 1.1em;}
-    .contact-card a {color: var(--clr-accent2); transition: color var(--trans);}
-    .contact-card a:hover {text-decoration:underline; color: var(--clr-accent3);}
-    footer {margin-top:4rem;padding:1.5rem 1rem;text-align:center;color:#8aa3ab;font-size:1rem;background-color: #eaf2f7;}
-
-    /* RESPONSIVE DESIGN */
-    .hamburger-menu {
-      display: none;
-      font-size: 1.8rem;
-      cursor: pointer;
-      color: var(--clr-accent1);
-      border: none;
-      background: none;
-      z-index: 15;
-    }
-
-    @media (max-width: 900px) {
-      body.nav-open {
-        overflow: hidden;
-      }
-      nav { justify-content: space-between; }
-      .hamburger-menu { display: block; }
-      .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2rem;
-        position: absolute;
-        top: var(--header-height);
-        left: 1rem;
-        right: 1rem;
-        height: max-content;
-        background: var(--clr-glass);
-        backdrop-filter: blur(5px);
-        border-radius: 18px;
-        box-shadow: var(--shadow);
-        padding: 1.5rem 1rem;
-        transition: transform 0.4s ease-in-out;
-        transform: translateX(120%);
-        z-index: 11;
-      }
-      body.nav-open .nav-links {
-        transform: translateX(0);
-      }
-      .nav-links li {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-      }
-      .nav-links li a {
-        color: var(--clr-dark);
-        font-weight: 600;
-        padding: 0.5rem 0;
-      }
-      .nav-links li a:hover {
-        background: none;
-        color: var(--clr-accent1);
-      }
-      .resume-li-mobile {
-        background: #e9fdf6;
-        border: 1px solid #c9f5e3;
-        border-radius: 18px;
-        box-shadow: 0 4px 15px rgba(39, 191, 163, 0.1);
-        padding: 0.5rem 0.5rem;
-        width: 90%;
-        margin-top: 0;
-        transition: transform var(--trans);
-      }
-      .resume-li-mobile:hover {
-        transform: scale(1.05);
-      }
-      .resume-li-mobile a.resume-btn-header {
-        background: none;
-        color: var(--clr-dark);
-        box-shadow: none;
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: 700;
-        font-size: 1rem;
-      }
-      .resume-li-mobile a.resume-btn-header i {
-        color: var(--clr-accent1);
-        font-size: 1.18em;
-      }
-
-      .hero-main{padding:1.5rem 0.5rem;flex-direction:column-reverse;align-items:center;gap:2rem;min-height:unset;}
-      .left-col-hero,.right-col-hero{min-width:unset;max-width:none;width:100%;align-items:center;}
-      .hero-title,.hero-summary,.hero-desc,.hero-tagline{text-align:center;}
-      .hero-title { font-size: 2.2rem; }
-      .hero-summary { font-size: 1.1rem; }
-      .cta-row{justify-content:center;}
-      .dashboard-section{flex-direction:column;gap:1.3em;}
-      .dashboard-column{max-width:none;width:100%;}
-      .profile-circle{margin:2em auto 1.4em auto; width:150px; height:150px;}
-      .exp-section { padding: 1.5em 1em; }
-      .section-container { padding: 0 1rem; }
-    }
-    @media(max-width:600px){
-      nav{padding:1rem 0.5rem;}
-      .hero-main {padding: 1em 0.5em;}
-      .profile-circle{width:111px;height:111px;}
-      .hero-title{font-size:1.8rem;}
-      .hero-summary, .hero-desc {font-size: 1rem;}
-      .section-container { padding: 0 0.5rem; }
-      .dashboard-section{gap:.67em; padding: 0;}
-      .contact-card { font-size: 1rem; padding: 1em 0.8em; }
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Tushar Soni | Business Analyst</title>
+    <meta name="description" content="Portfolio of Tushar Soni - Business Analyst & Team Lead. AI/ML, API & Business Analysis Expert.">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --clr-primary: #1a1a2e;
+          --clr-secondary: #0f3460;
+          --clr-accent1: #31e0ae;
+          --clr-accent2: #4a90e2;
+          --clr-accent3: #ae67fa;
+    	  --clr-accent4: #5DB5A4;
+          --clr-highlight: #30e1c0;
+          --clr-dark: #222831;
+          --clr-soft: #667e9b;
+          --clr-light: #fff;
+          --clr-bg: #f9fbfd;
+          --clr-panel: #fff;
+          --clr-glass: rgba(255,255,255,0.8);
+          --radius: 18px;
+          --shadow: 0 8px 30px rgba(39, 191, 163, 0.08), 0 3px 12px rgba(102, 126, 234, 0.05);
+          --shadow-hero: 0 15px 60px 10px rgba(102, 121, 250, 0.12);
+          --profile-size: 228px;
+          --trans: .3s ease-in-out;
+          --header-height: 80px;
+        }
+        *, *::before, *::after {
+          box-sizing: border-box;
+        }
+        html, body { height:100%; margin:0; padding:0; font-family:'Inter',sans-serif; background:var(--clr-bg); scroll-behavior: smooth;}
+        body { color:var(--clr-dark); line-height: 1.6; padding-top: var(--header-height); }
+        a { text-decoration:none; color:inherit; }
+    
+        /* Fix header overlap on scroll */
+        .hero-main, #dashboard, #experience, #skills, #projects, #certifications, #contact {
+          scroll-margin-top: calc(var(--header-height) + 1.5rem);
+        }
+    
+        header {
+          width:100vw; background: var(--clr-panel); position:fixed;top:0;z-index:12; box-shadow:0 2px 12px rgba(173,203,228,0.15);
+          transition:box-shadow var(--trans); height: var(--header-height);
+        }
+        nav {
+          max-width:1220px; margin:0 auto; padding:1.2rem 2rem;
+          display:flex;justify-content:space-between;align-items:center;
+        }
+        .logo-head {
+          font-weight:900; font-size:1.5rem;
+          background:linear-gradient(90deg, var(--clr-accent1) 55%, var(--clr-accent2) 90%);
+          -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+          letter-spacing:1px; user-select: none;
+          font-family: 'Poppins', sans-serif;
+        }
+        .nav-links {
+          list-style:none;display:flex;gap:1.5rem;align-items:center;font-size:1.06rem;font-weight:600;margin:0;padding:0;
+        }
+        .nav-links a, .resume-btn-header {
+          color: var(--clr-dark); padding:7px 15px; border-radius:16px; transition: box-shadow var(--trans), background var(--trans), color var(--trans);
+          font-family: 'Poppins', sans-serif;
+        }
+        .nav-links a:hover { background: #f0f8ff; color:var(--clr-accent2); }
+        .resume-btn-header {
+          border:none; background:linear-gradient(90deg, var(--clr-accent1) 50%, var(--clr-accent2));
+          color:#fff;margin-left:.8rem;box-shadow:0 2px 12px rgba(82, 236, 209, 0.4);
+          padding:9px 25px;font-weight:700;font-size:1rem;display:flex;align-items:center;
+          transition: all var(--trans);
+        }
+        .resume-btn-header:hover {
+          box-shadow: 0 5px 20px rgba(82, 236, 209, 0.6);
+          transform: translateY(-2px);
+        }
+        .resume-btn-header i {margin-right:0.6em;font-size:1.18em;}
+    
+        /* HERO */
+        .hero-main {
+          display:flex;align-items:center;justify-content:space-between;
+          max-width:1250px;margin:3.5rem auto 2.5rem auto;min-height:550px;gap:3rem;
+          padding:2rem;
+          background: linear-gradient(97deg, #fff 68%, #eefbf7 98%);
+          box-shadow: var(--shadow-hero);
+          border-radius:32px;
+        }
+        .left-col-hero {
+          flex:1;min-width:320px;max-width:650px;display:flex;flex-direction:column;align-items:flex-start;
+        }
+        .hero-greet {color:var(--clr-accent1);font-weight:600;font-size:1.2rem;letter-spacing:0.5px;}
+        .hero-title {
+          font-size:3.2rem;font-weight:900;line-height:1.2;letter-spacing:0.01em;
+          background:linear-gradient(90deg,var(--clr-accent1) 22%,var(--clr-accent3) 99%);display:inline;background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;
+          margin: .1em 0 .1em 0;
+        }
+        .hero-tagline { color: var(--clr-accent2); font-size:1.15rem;margin-bottom:.2em;font-weight:700; }
+        .hero-summary { font-size:1.25rem; color:var(--clr-soft); margin-bottom:.8em; }
+        .hero-desc { font-size:1.15rem; color:#6a7996;margin-bottom:1.2em;}
+        .cta-row { display:flex;gap:1.2rem; }
+        .cta-btn, .cta-btn-secondary {
+          border:none; border-radius:13px; font-weight:700; font-size:1.15rem;
+          padding: 0.83em 1.7em; cursor:pointer;box-shadow:0 2px 18px rgba(106, 198, 253, 0.15);
+          letter-spacing:.01em;outline:none;transition:all var(--trans);
+        }
+        .cta-btn { background: linear-gradient(90deg,var(--clr-accent1), #53ecea 88%); color:var(--clr-dark); }
+        .cta-btn:hover { transform: translateY(-2px); box-shadow:0 5px 25px rgba(83, 236, 234, 0.4); }
+        .cta-btn-secondary { background:#fff;border:1.5px solid var(--clr-accent1); color: var(--clr-accent1);}
+        .cta-btn-secondary:hover { transform: translateY(-2px); box-shadow:0 5px 25px rgba(49, 224, 174, 0.2); }
+        .right-col-hero{flex:0 0 var(--profile-size);display:flex;flex-direction:column;align-items:center;min-width:240px;}
+        .profile-circle{width:var(--profile-size);height:var(--profile-size);border-radius:50%;background:#edf8f4;box-shadow:0 3px 22px rgba(119, 140, 214, 0.1);border:6px solid #b6ffeb;display:flex;align-items:center;justify-content:center;overflow:hidden;margin-bottom:1.35em;}
+        .profile-circle img{width:100%;height:100%;object-fit:cover;object-position: top; /* This is the new fix */}
+        .badge-row {margin-top:-27px;display:flex; align-items:center;flex-direction:column;}
+        .expert-badge{
+          color:#fff;
+          background: linear-gradient(90deg, var(--clr-accent1) 63%, var(--clr-accent3) 99%);
+          border-radius:45px;
+          padding:0.41em 1.11em;
+          font-size:1.1rem;font-weight:800;
+          box-shadow:0 2px 15px rgba(0, 181, 134, 0.1);
+          margin-bottom:0.2em;letter-spacing:0.01em;
+          z-index:2; position:relative;}
+        .expert-badge small{display:block;font-size:.83em;font-weight:700;color:#daf7ec;}
+        /* SECTIONS */
+        .section-title {
+          font-size: 1.5rem;
+          font-weight: 800;
+          margin-bottom: 1.5em;
+          background: linear-gradient(90deg, var(--clr-accent1), var(--clr-accent2) 91%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-family: 'Poppins', sans-serif;
+        }
+        .section-container {
+          max-width: 1200px;
+          margin: 3.5em auto 2.5em auto;
+          padding: 0 2rem;
+        }
+        /* DASHBOARD CARDS */
+        .dashboard-section {
+          display:flex;gap:2.2em;align-items:flex-start;flex-wrap:wrap;
+        }
+        .dashboard-column {
+          flex:1;display:flex;flex-direction:column;gap:1.2em;min-width:310px;max-width:505px;}
+        .dash-card {
+          background:var(--clr-panel);border-radius:var(--radius);
+          box-shadow:var(--shadow);border:1.8px solid #cdf5ed;
+          display:flex;gap:1.15em;align-items:flex-start;padding:1.4em 1.6em;position:relative;min-height:72px;
+          transition: transform var(--trans), box-shadow var(--trans);
+        }
+        .dash-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
+        }
+        .dash-icon{
+          width:48px;height:48px;border-radius:50%;
+          display:flex;align-items:center;justify-content:center;
+          font-size:1.6rem;flex-shrink:0;color:#fff;margin-top:0.12em;
+        }
+        .dash-icon.prof{background:linear-gradient(120deg,var(--clr-accent1),#19a8ad);}
+        .dash-icon.edu{background:linear-gradient(120deg,var(--clr-accent2),#a18cd1);}
+        .dash-icon.fa{background:linear-gradient(120deg,var(--clr-accent3),#fb8c8c);}
+        .dash-content {flex:1;}
+        .dash-content strong{color: var(--clr-dark); font-size: 1.1rem; font-weight: 700; font-family: 'Poppins', sans-serif;}
+        .dash-content p, .dash-content ul { font-size: 1.05rem; color: var(--clr-soft); }
+        .dash-content ul{margin:0.25em 0 0 .95em;}
+        .cta-row-dashboard{margin-top:1.1em;}
+        /* TIMELINE/EXPERIENCE */
+        .exp-section {
+          border-radius:var(--radius);
+          background:var(--clr-panel);
+          box-shadow: var(--shadow);padding:2em 2em 1.5em 2em;
+          border:1.6px solid #e1f4f9;
+        }
+        .exp-row{border-left:4.5px solid #bbefe3;margin:0 0 2em 0;padding:0 0 0 1.5em;position:relative;}
+        .exp-marker{position:absolute;left:-23px;top:10px;width:32px;height:32px;border-radius:50%;background:#caf9ed;display:flex;align-items:center;justify-content:center;font-size:1.5em;color:var(--clr-accent2);box-shadow:0 2px 8px rgba(202, 249, 237, 0.6);border: 2.7px solid #fff;}
+        .exp-role{font-weight:800;color:var(--clr-accent2);font-family: 'Poppins', sans-serif;}
+    	.links-view{font-weight:500;color:var(--clr-accent4);font-family: 'Poppins', sans-serif; font-size: 14px;}
+        .exp-company{font-weight:600;color:var(--clr-dark);font-family: 'Poppins', sans-serif;}
+        .exp-dates{color:#97a1bb;font-size:1rem;}
+        .exp-desc{margin:.28em 0 0.28em 0; color:var(--clr-soft);}
+        /* SKILLS */
+        .skills-grid-section{display:grid;gap:1.5em;grid-template-columns:repeat(auto-fit,minmax(335px,1fr));}
+        .skills-card {
+          background:var(--clr-panel);border-radius:var(--radius);
+          box-shadow: var(--shadow);padding:1.4em;min-width:220px;
+          border:1.45px solid #e0f4ee;
+          transition: transform var(--trans), box-shadow var(--trans);
+        }
+        .skills-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
+        }
+        .skills-card-title {
+          color:var(--clr-accent2);font-size:1.15em;font-weight:700;margin-bottom:0.6em;display:flex;align-items:center;gap:.6em;
+          font-family: 'Poppins', sans-serif;
+        }
+        .skills-tags{display:flex;flex-wrap:wrap;gap:0.7em;margin-bottom:.46em;}
+        .tag {padding:0.35em 1.1em;border-radius:20px;font-size:0.95em;font-weight:600;background:#e9fdf6;color:var(--clr-dark);border: 1px solid #c9f5e3;}
+        /* GRID for projects/certs */
+        .grid-main {
+          display:grid;
+          grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+          gap:1.5em 1.8em;
+          list-style: none;
+          padding-left: 0;
+        }
+        .grid-main li {
+          background:var(--clr-panel);
+          border-radius:15px;box-shadow: 0 2px 11px rgba(204, 204, 204, 0.1);
+          border:1.2px solid #e0f4ee;
+          padding:22px 20px;
+          color:#33407f;
+          list-style:none;margin-bottom:0;min-width:220px;
+          transition:box-shadow var(--trans), transform var(--trans);
+        }
+        .grid-main li:hover{
+          box-shadow:0 8px 32px rgba(49, 224, 174, 0.1);
+          transform: translateY(-5px);
+        }
+        .proj-title,.cert-title{color:var(--clr-accent2);font-weight:800;font-family: 'Poppins', sans-serif;}
+        .cert-title + a, .proj-title + a{margin-left:.54em;}
+        /* Contact Cards */
+        .contact-grid {
+          display:grid; gap: 1.5rem; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+          max-width:1000px;margin-left:auto;margin-right:auto;
+        }
+        .contact-card {
+          background:#f3fefa;border:1.2px solid #caf9ed;border-radius:13px;padding:1.4em 1.2em;text-align:center;color:#26aaa2;box-shadow:0 2px 11px rgba(39, 191, 163, 0.1);font-size:1.07rem;
+          transition: transform var(--trans), box-shadow var(--trans);
+        }
+        .contact-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 40px rgba(39, 191, 163, 0.15), 0 4px 16px rgba(102, 126, 234, 0.1);
+        }
+        .contact-card i{font-size:1.3em; margin-bottom: 0.5em;}
+        .contact-card b {font-family: 'Poppins', sans-serif; font-size: 1.1em;}
+        .contact-card a {color: var(--clr-accent2); transition: color var(--trans);}
+        .contact-card a:hover {text-decoration:underline; color: var(--clr-accent3);}
+        footer {margin-top:4rem;padding:1.5rem 1rem;text-align:center;color:#8aa3ab;font-size:1rem;background-color: #eaf2f7;}
+    
+        /* RESPONSIVE DESIGN */
+        .hamburger-menu {
+          display: none;
+          font-size: 1.8rem;
+          cursor: pointer;
+          color: var(--clr-accent1);
+          border: none;
+          background: none;
+          z-index: 15;
+        }
+    
+        @media (max-width: 900px) {
+          body.nav-open {
+            overflow: hidden;
+          }
+          nav { justify-content: space-between; }
+          .hamburger-menu { display: block; }
+          .nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+            position: absolute;
+            top: var(--header-height);
+            left: 1rem;
+            right: 1rem;
+            height: max-content;
+            background: var(--clr-glass);
+            backdrop-filter: blur(5px);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            padding: 1.5rem 1rem;
+            transition: transform 0.4s ease-in-out;
+            transform: translateX(120%);
+            z-index: 11;
+          }
+          body.nav-open .nav-links {
+            transform: translateX(0);
+          }
+          .nav-links li {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+          .nav-links li a {
+            color: var(--clr-dark);
+            font-weight: 600;
+            padding: 0.5rem 0;
+          }
+          .nav-links li a:hover {
+            background: none;
+            color: var(--clr-accent1);
+          }
+          .resume-li-mobile {
+            background: #e9fdf6;
+            border: 1px solid #c9f5e3;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px rgba(39, 191, 163, 0.1);
+            padding: 0.5rem 0.5rem;
+            width: 90%;
+            margin-top: 0;
+            transition: transform var(--trans);
+          }
+          .resume-li-mobile:hover {
+            transform: scale(1.05);
+          }
+          .resume-li-mobile a.resume-btn-header {
+            background: none;
+            color: var(--clr-dark);
+            box-shadow: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+          }
+          .resume-li-mobile a.resume-btn-header i {
+            color: var(--clr-accent1);
+            font-size: 1.18em;
+          }
+    
+          .hero-main{padding:1.5rem 0.5rem;flex-direction:column-reverse;align-items:center;gap:2rem;min-height:unset;}
+          .left-col-hero,.right-col-hero{min-width:unset;max-width:none;width:100%;align-items:center;}
+          .hero-title,.hero-summary,.hero-desc,.hero-tagline{text-align:center;}
+          .hero-title { font-size: 2.2rem; }
+          .hero-summary { font-size: 1.1rem; }
+          .cta-row{justify-content:center;}
+          .dashboard-section{flex-direction:column;gap:1.3em;}
+          .dashboard-column{max-width:none;width:100%;}
+          .profile-circle{margin:2em auto 1.4em auto; width:150px; height:150px;}
+          .exp-section { padding: 1.5em 1em; }
+          .section-container { padding: 0 1rem; }
+        }
+        @media(max-width:600px){
+          nav{padding:1rem 0.5rem;}
+          .hero-main {padding: 1em 0.5em;}
+          .profile-circle{width:111px;height:111px;}
+          .hero-title{font-size:1.8rem;}
+          .hero-summary, .hero-desc {font-size: 1rem;}
+          .section-container { padding: 0 0.5rem; }
+          .dashboard-section{gap:.67em; padding: 0;}
+          .contact-card { font-size: 1rem; padding: 1em 0.8em; }
+        }
+    </style>
 </head>
+
 <body>
-  <header>
-    <nav>
-      <div class="logo-head">TS</div>
-      <button class="hamburger-menu" aria-label="Toggle navigation">
-        <i class="bi bi-list"></i>
-      </button>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#dashboard">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li class="resume-li-mobile">
-          <a href="Resume_Tushar_Soni.pdf" download class="resume-btn-header">
-            <i class="bi bi-download"></i>Resume
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <section class="hero-main" id="home">
-    <div class="left-col-hero">
-      <span class="hero-greet">Hi, I'm Tushar Soni —</span>
-      <div class="hero-title">
-        Turning Business Needs<br>Into Scalable Tech Solutions
-      </div>
-      <div class="hero-tagline">Business Analyst & Team Lead</div>
-      <div class="hero-summary">
-        Strategic IT Business Analyst skilled at leveraging data-driven analysis and process innovation to deliver solutions aligned with business objectives. Adept at gathering requirements, leading cross-functional teams, and driving digital transformation through AI/ML, modern BI, and seamless stakeholder engagement.
-      </div>
-      <div class="hero-desc">
-        I thrive at the interface of business needs and scalable technology—fueling transformation for clients such as McDonald's USA through expert process analysis, API integrations, and AI-powered workflow design.
-      </div>
-      <div class="cta-row">
-        <a href="#projects"><button class="cta-btn">See My Impact</button></a>
-        <a href="#contact"><button class="cta-btn-secondary">Let's Connect</button></a>
-      </div>
-    </div>
-    <div class="right-col-hero">
-      <div class="profile-circle">
-        <img src="https://raw.githubusercontent.com/tushsoni/tushar-portfolio/main/Pic_Tushar-Photoroom.png" alt="Tushar Soni"/>
-      </div>
-      <div class="badge-row">
-        <span class="expert-badge">EXPERT<br>BA <small>Since '20</small></span>
-      </div>
-    </div>
-  </section>
-  <section class="section-container" id="dashboard">
-    <div class="dashboard-section">
-      <div class="dashboard-column">
-        <div class="dash-card">
-          <div class="dash-icon prof"><i class="bi bi-person-badge"></i></div>
-          <div class="dash-content">
-            <strong>About Me</strong>
-            <p>I currently serve as a Business Analyst (Team Lead) at ANR Software Pvt. Ltd. (Altametrics), where I lead cutting-edge digital initiatives for McDonald's USA.</p>
-            <b style="color:#27bfa3;">Focus Areas:</b>
-            <ul>
-              <li>AI/ML Model Design for workforce & operations optimization</li>
-              <li>Enterprise App Modernization, esp. eRestaurant HR, Labor & Payroll</li>
-              <li>Process Excellence through requirements analysis and continuous improvement</li>
-              <li>Project Management and full SDLC ownership</li>
-              <li>Stakeholder Consulting, translating business needs to scalable solutions</li>
+    <header>
+        <nav>
+            <div class="logo-head">TS</div>
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dashboard">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="resume-li-mobile">
+                    <a href="Resume_Tushar_Soni.pdf" download class="resume-btn-header">
+                        <i class="bi bi-download"></i>Resume
+                    </a>
+                </li>
             </ul>
-          </div>
+        </nav>
+    </header>
+    <section class="hero-main" id="home">
+        <div class="left-col-hero">
+            <span class="hero-greet">Hi, I'm Tushar Soni —</span>
+            <div class="hero-title">
+                Turning Business Needs
+                <br>Into Scalable Tech Solutions
+            </div>
+            <div class="hero-tagline">Business Analyst & Team Lead</div>
+            <div class="hero-summary">
+                Strategic IT Business Analyst skilled at leveraging data-driven analysis and process innovation to deliver solutions aligned with business objectives. Adept at gathering requirements, leading cross-functional teams, and driving digital transformation
+                through AI/ML, modern BI, and seamless stakeholder engagement.
+            </div>
+            <div class="hero-desc">
+                I thrive at the interface of business needs and scalable technology—fueling transformation for clients such as McDonald's USA through expert process analysis, API integrations, and AI-powered workflow design.
+            </div>
+            <div class="cta-row">
+                <a href="#projects">
+                    <button class="cta-btn">See My Impact</button>
+                </a>
+                <a href="#contact">
+                    <button class="cta-btn-secondary">Let's Connect</button>
+                </a>
+            </div>
         </div>
-      </div>
-      <div class="dashboard-column">
-        <div class="dash-card">
-          <div class="dash-icon fa"><i class="bi bi-mortarboard"></i></div>
-          <div class="dash-content">
-            <strong>Education</strong>
-            <ul>
-			  <li>B.Tech in Computer Science, Amity University, Noida (2016–2020)</li>
-              <li>12th Grade, Children's Academy, Alwar (2015)</li>
-              <li>10th Grade, National Academy, Alwar (2013)</li>
-            </ul>
-          </div>
+        <div class="right-col-hero">
+            <div class="profile-circle">
+                <img src="https://raw.githubusercontent.com/tushsoni/tushar-portfolio/main/Pic_Tushar-Photoroom.png" alt="Tushar Soni" />
+            </div>
+            <div class="badge-row">
+                <span class="expert-badge">EXPERT<br>BA <small>Since '2020</small></span>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-container" id="experience">
-    <div class="exp-section">
-      <div class="section-title">Professional Experience</div>
-      <div class="exp-row">
-        <div class="exp-marker"><i class="bi bi-laptop"></i></div>
-        <div class="exp-role">Business Analyst (Team Lead)</div>
-        <div class="exp-company">ANR Software Private Limited (Altametrics)</div>
-        <div class="exp-dates">September 2022 – Present</div>
-        <div class="exp-desc">
-          Lead eRestaurant product teams building innovative AI/ML features and intuitive UI for McDonald's USA. Align IT solutions and roadmaps with key business goals and global client requirements. Oversee complete SDLC; mentor technical teams; manage deliverables and process enhancements.
+    </section>
+    <section class="section-container" id="dashboard">
+        <div class="dashboard-section">
+            <div class="dashboard-column">
+                <div class="dash-card">
+                    <div class="dash-icon prof"><i class="bi bi-person-badge"></i></div>
+                    <div class="dash-content">
+                        <strong>About Me</strong>
+                        <p>I currently serve as a Business Analyst (Team Lead) at ANR Software Pvt. Ltd. (Altametrics), where I lead cutting-edge digital initiatives for McDonald's USA.</p>
+                        <b style="color:#27bfa3;">Focus Areas:</b>
+                        <ul>
+                            <li>AI/ML Model Design for workforce & operations optimization</li>
+                            <li>Enterprise App Modernization, esp. eRestaurant HR, Labor & Payroll</li>
+                            <li>Process Excellence through requirements analysis and continuous improvement</li>
+                            <li>Project Management and full SDLC ownership</li>
+                            <li>Stakeholder Consulting, translating business needs to scalable solutions</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-column">
+                <div class="dash-card">
+                    <div class="dash-icon fa"><i class="bi bi-mortarboard"></i></div>
+                    <div class="dash-content">
+                        <strong>Education</strong>
+                        <ul>
+                            <li>B.Tech in Computer Science, Amity University, Noida (2016–2020)</li>
+                            <li>12th Grade, Children's Academy, Alwar (2015)</li>
+                            <li>10th Grade, National Academy, Alwar (2013)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="exp-row">
-        <div class="exp-marker"><i class="bi bi-laptop"></i></div>
-        <div class="exp-role">Senior Product Analyst</div>
-        <div class="exp-company">Vinculum Solutions Pvt. Ltd.</div>
-        <div class="exp-dates">May 2022 – July 2022</div>
-        <div class="exp-desc">
-          Managed Catalog Management System integrations for Amazon, Myntra, Flipkart, Fossil. Authored API docs, streamlined multi-marketplace SKU management, reduced catalog errors by 30%, and led agile stand-ups.
+    </section>
+    <section class="section-container" id="experience">
+        <div class="exp-section">
+            <div class="section-title">Professional Experience</div>
+            <div class="exp-row">
+                <div class="exp-marker"><i class="bi bi-laptop"></i></div>
+                <div class="exp-role">Business Analyst (Team Lead)</div>
+                <div class="exp-company">ANR Software Private Limited (Altametrics)</div>
+                <div class="exp-dates">September 2022 – Present</div>
+                <div class="exp-desc">
+                    Lead eRestaurant product teams building innovative AI/ML features and intuitive UI for McDonald's USA. Align IT solutions and roadmaps with key business goals and global client requirements. Oversee complete SDLC; mentor technical teams; manage deliverables
+                    and process enhancements.
+                </div>
+            </div>
+            <div class="exp-row">
+                <div class="exp-marker"><i class="bi bi-laptop"></i></div>
+                <div class="exp-role">Senior Product Analyst</div>
+                <div class="exp-company">Vinculum Solutions Pvt. Ltd.</div>
+                <div class="exp-dates">May 2022 – July 2022</div>
+                <div class="exp-desc">
+                    Managed Catalog Management System integrations for Amazon, Myntra, Flipkart, Fossil. Authored API docs, streamlined multi-marketplace SKU management, reduced catalog errors by 30%, and led agile stand-ups.
+                </div>
+            </div>
+            <div class="exp-row">
+                <div class="exp-marker"><i class="bi bi-laptop"></i></div>
+                <div class="exp-role">Product Analyst</div>
+                <div class="exp-company">ANR Software Private Limited (Altametrics)</div>
+                <div class="exp-dates">January 2020 – April 2022</div>
+                <div class="exp-desc">
+                    Optimized products/services for McDonald's USA, improving process efficiency and business value. Coordinated support and QA teams, ensured smooth deployments, and elevated user satisfaction.
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="exp-row">
-        <div class="exp-marker"><i class="bi bi-laptop"></i></div>
-        <div class="exp-role">Product Analyst</div>
-        <div class="exp-company">ANR Software Private Limited (Altametrics)</div>
-        <div class="exp-dates">January 2020 – April 2022</div>
-        <div class="exp-desc">
-          Optimized products/services for McDonald's USA, improving process efficiency and business value. Coordinated support and QA teams, ensured smooth deployments, and elevated user satisfaction.
+    </section>
+    <section class="section-container" id="skills">
+        <div class="section-title">Skills</div>
+        <div class="skills-grid-section">
+            <div class="skills-card">
+                <div class="skills-card-title"><i class="bi bi-diagram-3-fill"></i> Technical, Analytical &amp; BA Methods</div>
+                <div class="skills-tags">
+                    <span class="tag">Business Process Modeling (BPMN, UML)</span>
+                    <span class="tag">Requirements Engineering</span>
+                    <span class="tag">Elicitation</span>
+                    <span class="tag">Interviewing</span>
+                    <span class="tag">JAD/RAD</span>
+                    <span class="tag">Workshops</span>
+                    <span class="tag">Data Analysis</span>
+                    <span class="tag">Excel</span>
+                    <span class="tag">Power BI</span>
+                    <span class="tag">Tableau</span>
+                    <span class="tag">Looker Studio</span>
+                    <span class="tag">Database Management</span>
+                    <span class="tag">SQL/MySQL/Oracle/PostgreSQL</span>
+                    <span class="tag">Advanced Reporting</span>
+                    <span class="tag">KPI Dashboards</span>
+                    <span class="tag">SDLC/STLC</span>
+                    <span class="tag">Agile/Scrum/Kanban/Waterfall</span>
+                    <span class="tag">System Design</span>
+                    <span class="tag">API Integration (REST, SOAP, Postman, Swagger)</span>
+                    <span class="tag">UAT</span>
+                </div>
+            </div>
+            <div class="skills-card">
+                <div class="skills-card-title"><i class="bi bi-people-fill"></i> Consulting, Project &amp; Soft Skills</div>
+                <div class="skills-tags">
+                    <span class="tag">Stakeholder Engagement</span>
+                    <span class="tag">Communication</span>
+                    <span class="tag">Cross-Functional Team Leadership</span>
+                    <span class="tag">Project Management/Planning</span>
+                    <span class="tag">Change Management &amp; Training</span>
+                    <span class="tag">Risk Assessment (RCA, SWOT, Cost-Benefit)</span>
+                    <span class="tag">Problem Solving</span>
+                    <span class="tag">Critical Thinking</span>
+                    <span class="tag">Requirements Traceability (RTM)</span>
+                    <span class="tag">Documentation</span>
+                    <span class="tag">Negotiation</span>
+                    <span class="tag">Conflict Resolution</span>
+                    <span class="tag">Gap Analysis</span>
+                    <span class="tag">Continuous Improvement</span>
+                </div>
+            </div>
+            <div class="skills-card">
+                <div class="skills-card-title"><i class="bi bi-box-seam"></i> Tools, Platforms &amp; Domain Knowledge</div>
+                <div class="skills-tags">
+                    <span class="tag">JIRA/Trello/Confluence/MS Project</span>
+                    <span class="tag">Figma/Miro/Lucidchart/Draw.io</span>
+                    <span class="tag">Power BI/Tableau/Looker Studio</span>
+                    <span class="tag">Microsoft Office</span>
+                    <span class="tag">Postman/Swagger</span>
+                    <span class="tag">API Test Clients</span>
+                    <span class="tag">Zoom/Teams/Slack/Google Workspace</span>
+                    <span class="tag">AWS/Azure</span>
+                    <span class="tag">IT Infrastructure</span>
+                    <span class="tag">Retail</span>
+                    <span class="tag">E-commerce</span>
+                    <span class="tag">Food Service</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-container" id="skills">
-    <div class="section-title">Skills</div>
-    <div class="skills-grid-section">
-      <div class="skills-card">
-        <div class="skills-card-title"><i class="bi bi-diagram-3-fill"></i> Technical, Analytical &amp; BA Methods</div>
-        <div class="skills-tags">
-          <span class="tag">Business Process Modeling (BPMN, UML)</span>
-          <span class="tag">Requirements Engineering</span>
-          <span class="tag">Elicitation</span>
-          <span class="tag">Interviewing</span>
-          <span class="tag">JAD/RAD</span>
-          <span class="tag">Workshops</span>
-          <span class="tag">Data Analysis</span>
-          <span class="tag">Excel</span>
-          <span class="tag">Power BI</span>
-          <span class="tag">Tableau</span>
-          <span class="tag">Looker Studio</span>
-          <span class="tag">Database Management</span>
-          <span class="tag">SQL/MySQL/Oracle/PostgreSQL/MongoDB</span>
-          <span class="tag">Advanced Reporting</span>
-          <span class="tag">KPI Dashboards</span>
-          <span class="tag">SDLC/STLC</span>
-          <span class="tag">Agile/Scrum/Kanban/Waterfall</span>
-          <span class="tag">System Design</span>
-          <span class="tag">API Integration (REST, SOAP, Postman, Swagger)</span>
-          <span class="tag">UAT</span>
-        </div>
-      </div>
-      <div class="skills-card">
-        <div class="skills-card-title"><i class="bi bi-people-fill"></i> Consulting, Project &amp; Soft Skills</div>
-        <div class="skills-tags">
-          <span class="tag">Stakeholder Engagement</span>
-          <span class="tag">Communication</span>
-          <span class="tag">Cross-Functional Team Leadership</span>
-          <span class="tag">Project Management/Planning</span>
-          <span class="tag">Change Management &amp; Training</span>
-          <span class="tag">Risk Assessment (RCA, SWOT, Cost-Benefit)</span>
-          <span class="tag">Problem Solving</span>
-          <span class="tag">Critical Thinking</span>
-          <span class="tag">Requirements Traceability (RTM)</span>
-          <span class="tag">Documentation</span>
-          <span class="tag">Negotiation</span>
-          <span class="tag">Conflict Resolution</span>
-          <span class="tag">Gap Analysis</span>
-          <span class="tag">Continuous Improvement</span>
-        </div>
-      </div>
-      <div class="skills-card">
-        <div class="skills-card-title"><i class="bi bi-box-seam"></i> Tools, Platforms &amp; Domain Knowledge</div>
-        <div class="skills-tags">
-          <span class="tag">JIRA/Trello/Confluence/MS Project</span>
-          <span class="tag">Figma/Miro/Lucidchart/Draw.io</span>
-          <span class="tag">Power BI/Tableau/Looker Studio</span>
-          <span class="tag">Microsoft Office</span>
-          <span class="tag">Postman/Swagger</span>
-          <span class="tag">API Test Clients</span>
-          <span class="tag">Zoom/Teams/Slack/Google Workspace</span>
-          <span class="tag">AWS/Azure</span>
-          <span class="tag">IT Infrastructure</span>
-          <span class="tag">Retail</span>
-          <span class="tag">E-commerce</span>
-          <span class="tag">Food Service</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section-container" id="projects">
-    <div class="section-title">Key Projects</div>
-    <ul class="grid-main">
-      <li>
-        <span class="proj-title">Core Shift</span><br>
-        Developed a machine learning model that analyzes previous weeks' employee schedules created by managers to automatically generate optimized schedules for upcoming week.
-      </li>
-      <li>
-        <span class="proj-title">AI Forecast</span><br>
-        Designed and implemented a machine learning/AI and mathematical optimization solution that improves workforce forecasting accuracy and scheduling efficiency in an Altametrics Environment. The model predicted labor hours, Transactions, Forecasted Sales using historical data and optimized staffing schedules using business constraints and labor cost limits.
-      </li>
-      <li>
-        <span class="proj-title">Auto Skill Upgrade</span><br>
-        Designed an AI-based solution that evaluates employees' scheduled hours and recommends skill level upgrades to managers based on scheduled hours on particular job codes.
-      </li>
-      <li>
-        <span class="proj-title">Position Guide</span><br>
-        Created a labor percentage model that schedules employees based on labor cost trends from previous weeks, added visual dashboards and graphs to analyze shifts, labor percentages, and weekly scheduling insights effectively.
-      </li>
-      <li>
-        <span class="proj-title">Smart Clock</span><br>
-        Secure, AI-driven Face ID time clock for contactless attendance & compliance.
-      </li>
-      <li>
-        <span class="proj-title">eRestaurant UI/Dashboards</span><br>
-        Enhanced the eRestaurant product by redesigning user-friendly interfaces for key modules, including HR, Timekeeping, Labor, Payroll, and Scheduling. Introduced a new Dashboard tab in each module, featuring interactive graphs to provide business insights and support cost-saving strategies.
-      </li>
-      <li>
-        <span class="proj-title">Mobile App Enhancements</span><br>
-        Improved mobile applications such as Altametrics DAR, Schedule, and Clock by integrating new features based on user feedback and introducing additional functionalities aimed at boosting business productivity.
-      </li>
-      <li>
-        <span class="proj-title">Time Loss and Labor Dashboard</span><br>
-        Developed an advanced dashboard tool capable of identifying inefficiencies, resulting in potential savings of up to $1,000 per week.
-      </li>
-      <li>
-        <span class="proj-title">Catalog Management System</span><br>
-        API automation for SKU listing and product data consistency across online marketplaces.
-      </li>
-    </ul>
-  </section>
-  <section class="section-container" id="projects">
-    <div class="section-title">Power BI Projects</div>
-    <ul class="grid-main">
-      <li>
-        <span class="cert-title">Zomato Restaurant Analysis</span><br><br>
-        This interactive Power BI dashboard provides a comprehensive overview of restaurant performance metrics based on Zomato data across multiple cities in India. It enables users to analyze restaurant trends, cost distribution, cuisine popularity, online delivery patterns, and more.<br><br>
-        <a href="Screenshot_Zomato_Dashboard.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a><br><br>
-        <a href="https://github.com/tushsoni/PowerBI-ZomatoRestaurantAnalysis" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-      <li>
-        <span class="cert-title">McDonald’s USA Franchisee Altametrics AI Forecast VS Third Party Vendor Projection Data Analysis</span><br><br>
-        This Power BI dashboard provides a comprehensive week-over-week comparison of store performance metrics for the first week of July 2024 vs July 2025 across key operational areas.<br><br>
-        <a href="Screenshot_Store_Performance_Dashboard.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a><br><br>
-        <a href="https://github.com/tushsoni/PowerBI-StorePerformanceDashboard" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-      <li>
-        <span class="cert-title">Udemy Course Learning Analytics</span><br><br>
-        This Power BI project presents an insightful Udemy Course Learning Analytics Dashboard, built using a fictional learning dataset. The dashboard is designed to track and visualize student performance, learning behaviors, and course popularity for a data-driven education platform like Udemy.<br><br>
-        <a href="Snapshot_UdemyCourseLearningAnalytics.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a><br><br>
-        <a href="https://github.com/tushsoni/PowerBI-UdemyCourseLearningAnalytics" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-      <li>
-        <span class="cert-title">Financial Loss McDonalds USA Franchisee</span><br><br>
-        This Power BI report presents a comprehensive financial loss analysis across multiple stores, helping operations and HR teams monitor and reduce labor inefficiencies that lead to monetary losses. The dashboard is fully interactive with filtering capabilities across store numbers, business dates, and locations.<br><br>
-        <a href="Snapshot_Financial_Loss_Report_McDonalds.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a><br><br>
-        <a href="https://github.com/tushsoni/PowerBI-FinancialLossReportMcD" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-    </ul>
-  </section>
-  
+    </section>
+    <section class="section-container" id="projects">
+        <div class="section-title">Key Projects</div>
+        <ul class="grid-main">
+            <li>
+                <span class="proj-title">Core Shift</span>
+                <br> Developed a machine learning model that analyzes previous weeks' employee schedules created by managers to automatically generate optimized schedules for upcoming week.
+            </li>
+            <li>
+                <span class="proj-title">AI Forecast</span>
+                <br> Designed and implemented a machine learning/AI and mathematical optimization solution that improves workforce forecasting accuracy and scheduling efficiency in an Altametrics Environment. The model predicted labor hours, Transactions,
+                Forecasted Sales using historical data and optimized staffing schedules using business constraints and labor cost limits.
+            </li>
+            <li>
+                <span class="proj-title">Auto Skill Upgrade</span>
+                <br> Designed an AI-based solution that evaluates employees' scheduled hours and recommends skill level upgrades to managers based on scheduled hours on particular job codes.
+            </li>
+            <li>
+                <span class="proj-title">Position Guide</span>
+                <br> Created a labor percentage model that schedules employees based on labor cost trends from previous weeks, added visual dashboards and graphs to analyze shifts, labor percentages, and weekly scheduling insights effectively.
+            </li>
+            <li>
+                <span class="proj-title">Smart Clock</span>
+                <br> Secure, AI-driven Face ID time clock for contactless attendance & compliance.
+            </li>
+            <li>
+                <span class="proj-title">eRestaurant UI/Dashboards</span>
+                <br> Enhanced the eRestaurant product by redesigning user-friendly interfaces for key modules, including HR, Timekeeping, Labor, Payroll, and Scheduling. Introduced a new Dashboard tab in each module, featuring interactive graphs to provide
+                business insights and support cost-saving strategies.
+            </li>
+            <li>
+                <span class="proj-title">Mobile App Enhancements</span>
+                <br> Improved mobile applications such as Altametrics DAR, Schedule, and Clock by integrating new features based on user feedback and introducing additional functionalities aimed at boosting business productivity.
+            </li>
+            <li>
+                <span class="proj-title">Time Loss and Labor Dashboard</span>
+                <br> Developed an advanced dashboard tool capable of identifying inefficiencies, resulting in potential savings of up to $1,000 per week.
+            </li>
+            <li>
+                <span class="proj-title">Catalog Management System</span>
+                <br> API automation for SKU listing and product data consistency across online marketplaces.
+            </li>
+        </ul>
+    </section>
+    <section class="section-container" id="projects">
+        <div class="section-title">Power BI Projects</div>
+        <ul class="grid-main">
+            <li>
+                <span class="cert-title">Zomato Restaurant Analysis</span>
+                <br>
+                <br> This interactive Power BI dashboard provides a comprehensive overview of restaurant performance metrics based on Zomato data across multiple cities in India. It enables users to analyze restaurant trends, cost distribution, cuisine popularity,
+                online delivery patterns, and more.
+                <br>
+                <br>
+                <div class="links-view">Explore the project details by clicking the links below.</div>
+                <br>
+                <a href="Screenshot_Zomato_Dashboard.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/PowerBI-ZomatoRestaurantAnalysis" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li>
+                <span class="cert-title">McDonald’s USA Franchisee Altametrics AI Forecast VS Third Party Vendor Projection Data Analysis</span>
+                <br>
+                <br> This Power BI dashboard provides a comprehensive week-over-week comparison of store performance metrics for the first week of July 2024 vs July 2025 across key operational areas.
+                <br>
+                <br>
+                <div class="links-view">Explore the project details by clicking the links below.</div>
+                <br>
+                <a href="Screenshot_Store_Performance_Dashboard.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/PowerBI-StorePerformanceDashboard" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li>
+                <span class="cert-title">Udemy Course Learning Analytics</span>
+                <br>
+                <br> This Power BI project presents an insightful Udemy Course Learning Analytics Dashboard, built using a fictional learning dataset. The dashboard is designed to track and visualize student performance, learning behaviors, and course popularity
+                for a data-driven education platform like Udemy.
+                <br>
+                <br>
+                <div class="links-view">Explore the project details by clicking the links below.</div>
+                <br>
+                <a href="Snapshot_UdemyCourseLearningAnalytics.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/PowerBI-UdemyCourseLearningAnalytics" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li>
+                <span class="cert-title">Financial Loss McDonalds USA Franchisee</span>
+                <br>
+                <br> This Power BI report presents a comprehensive financial loss analysis across multiple stores, helping operations and HR teams monitor and reduce labor inefficiencies that lead to monetary losses. The dashboard is fully interactive with
+                filtering capabilities across store numbers, business dates, and locations.
+                <br>
+                <br>
+                <div class="links-view">Explore the project details by clicking the links below.</div>
+                <br>
+                <a href="Snapshot_Financial_Loss_Report_McDonalds.png" download><i class="bi bi-file-earmark-image"></i> Dashboard Snapshot</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/PowerBI-FinancialLossReportMcD" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+        </ul>
+    </section>
+
     <section class="section-container" id="certifications">
-    <div class="section-title">Certifications</div>
-    <ul class="grid-main">
-      <li>
-        <span class="cert-title">Data Analysis with Python (IBM/Simplilearn, July 2025)</span><br><br>
-        <a href="https://courses.skillsnet.simplilearn.com/certificates/089962eb18954626ab408683c9a809e5" target="_blank"><i class="bi bi-award"></i> Certificate</a><br><br>
-        <a href="https://github.com/tushsoni/AppRatingPrediction" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-      <li>
-        <span class="cert-title">Mathematical Optimization for Business Problems (IBM/Simplilearn, July 2025)</span><br><br>
-        <a href="https://courses.skillsnet.simplilearn.com/certificates/048b613e229b41ffbc70bdf221a2be4d" target="_blank"><i class="bi bi-award"></i> Certificate</a><br><br>
-        <a href="https://github.com/tushsoni/MathematicalOptimizationForBusinessProblems" target="_blank"><i class="bi bi-github"></i> Github</a>
-      </li>
-      <li><span class="cert-title">Project Management (Oxford Home Study Centre, 2024)</span></li>
-      <li><span class="cert-title">Employee of the Month (ANR Software, May 2023)</span></li>
-      <li><span class="cert-title">Advanced Google Analytics (Google, 2022)</span></li>
-      <li><span class="cert-title">Google Analytics for Beginners (Google, 2022)</span></li>
-    </ul>
-  </section>
-  
-  <section class="section-container" id="contact">
-    <div class="section-title">Contact</div>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <i class="bi bi-envelope"></i><br>
-        <b>Email</b><br>
-        <a href="mailto:tusshsoni@gmail.com">tusshsoni@gmail.com</a>
-      </div>
-      <div class="contact-card">
-        <i class="bi bi-telephone"></i><br>
-        <b>Phone</b><br>
-        <a href="tel:+919680266559">+91 9680266559</a>
-      </div>
-      <div class="contact-card">
-        <i class="bi bi-linkedin"></i><br>
-        <b>LinkedIn</b><br>
-        <a href="https://linkedin.com/in/tushar-soni-5a77a8188" target="_blank">tushar-soni</a>
-      </div>
-      <div class="contact-card">
-        <i class="bi bi-geo-alt"></i><br>
-        <b>Location</b><br>
-        Noida, Uttar Pradesh, India
-      </div>
-      <div class="contact-card">
-        <i class="bi bi-file-earmark-person"></i><br>
-        <b>Resume</b><br>
-        <a href="Resume_Tushar_Soni.pdf" download>Download Resume</a>
-      </div>
-    </div>
-  </section>
-  <footer>
-    &copy; 2025 Tushar Soni. All rights reserved.
-  </footer>
+        <div class="section-title">Certifications</div>
+        <ul class="grid-main">
+            <li>
+                <span class="cert-title">Data Analysis with Python (IBM/Simplilearn, July 2025)</span>
+                <br>
+                <br>
+                <div class="links-view">Explore the certificate details by clicking the links below.</div>
+                <br>
+                <a href="https://courses.skillsnet.simplilearn.com/certificates/089962eb18954626ab408683c9a809e5" target="_blank"><i class="bi bi-award"></i> Certificate</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/AppRatingPrediction" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li>
+                <span class="cert-title">Mathematical Optimization for Business Problems (IBM/Simplilearn, July 2025)</span>
+                <br>
+                <br>
+                <div class="links-view">Explore the certificate details by clicking the links below.</div>
+                <br>
+                <a href="https://courses.skillsnet.simplilearn.com/certificates/048b613e229b41ffbc70bdf221a2be4d" target="_blank"><i class="bi bi-award"></i> Certificate</a>
+                <br>
+                <br>
+                <a href="https://github.com/tushsoni/MathematicalOptimizationForBusinessProblems" target="_blank"><i class="bi bi-github"></i> Github</a>
+            </li>
+            <li><span class="cert-title">Project Management (Oxford Home Study Centre, 2024)</span></li>
+            <li><span class="cert-title">Employee of the Month (ANR Software, May 2023)</span></li>
+            <li><span class="cert-title">Advanced Google Analytics (Google, 2022)</span></li>
+            <li><span class="cert-title">Google Analytics for Beginners (Google, 2022)</span></li>
+        </ul>
+    </section>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const hamburger = document.querySelector('.hamburger-menu');
-      const navLinks = document.querySelector('.nav-links');
-      const body = document.body;
+    <section class="section-container" id="contact">
+        <div class="section-title">Contact</div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <i class="bi bi-envelope"></i>
+                <br>
+                <b>Email</b>
+                <br>
+                <a href="mailto:tusshsoni@gmail.com">tusshsoni@gmail.com</a>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-telephone"></i>
+                <br>
+                <b>Phone</b>
+                <br>
+                <a href="tel:+919680266559">+91 9680266559</a>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-linkedin"></i>
+                <br>
+                <b>LinkedIn</b>
+                <br>
+                <a href="https://linkedin.com/in/tushar-soni-5a77a8188" target="_blank">tushar-soni-5a77a8188</a>
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-geo-alt"></i>
+                <br>
+                <b>Location</b>
+                <br> Noida, Uttar Pradesh, India
+            </div>
+            <div class="contact-card">
+                <i class="bi bi-file-earmark-person"></i>
+                <br>
+                <b>Resume</b>
+                <br>
+                <a href="Resume_Tushar_Soni.pdf" download>Download Resume</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        Tushar Soni | Business Analyst
+    </footer>
 
-      function toggleMenu() {
-        body.classList.toggle('nav-open');
-      }
-
-      hamburger.addEventListener('click', toggleMenu);
-
-      navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', toggleMenu);
-      });
-    });
-  </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.querySelector('.hamburger-menu');
+          const navLinks = document.querySelector('.nav-links');
+          const body = document.body;
+    
+          function toggleMenu() {
+            body.classList.toggle('nav-open');
+          }
+    
+          hamburger.addEventListener('click', toggleMenu);
+    
+          navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', toggleMenu);
+          });
+        });
+    </script>
 </body>
+
 </html>
